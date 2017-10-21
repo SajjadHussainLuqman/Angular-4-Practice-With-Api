@@ -21,6 +21,7 @@ namespace WebBusiness
             }
             else
             {
+
                 string authenticationToken = actionContext.Request.Headers
                                             .Authorization.Parameter;
                 string decodedAuthenticationToken = Encoding.UTF8.GetString(
