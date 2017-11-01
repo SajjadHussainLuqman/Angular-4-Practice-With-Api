@@ -8,11 +8,8 @@ C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\CommerceBit\CommerceB
 C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\CommerceBit\CommerceBit\bin\Debug\CommerceBit.exe
 C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\CommerceBit\CommerceBit\bin\Debug\CommerceBit.pdb
 C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\CommerceBit\CommerceBit\bin\Debug\Newtonsoft.Json.dll
-C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\CommerceBit\CommerceBit\bin\Debug\System.Diagnostics.DiagnosticSource.dll
-C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\CommerceBit\CommerceBit\bin\Debug\System.Net.Http.dll
 C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\CommerceBit\CommerceBit\bin\Debug\System.Net.Http.Formatting.dll
 C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\CommerceBit\CommerceBit\bin\Debug\Newtonsoft.Json.xml
-C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\CommerceBit\CommerceBit\bin\Debug\System.Diagnostics.DiagnosticSource.xml
 C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\CommerceBit\CommerceBit\bin\Debug\System.Net.Http.Formatting.xml
 C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\CommerceBit\CommerceBit\obj\Debug\CommerceBit.CommerceBitForm.resources
 C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\CommerceBit\CommerceBit\obj\Debug\CommerceBit.ConnectedForm.resources
