@@ -7,6 +7,8 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
+using System.Net.Http.Formatting;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,8 +17,10 @@ namespace CommerceBit
 {
     public partial class CommerceBitForm : Form
     {
-        public CommerceBitForm()
+        Token tokenInfo;
+        public CommerceBitForm(Token t)
         {
+            tokenInfo = t;
             InitializeComponent();
         }
 
@@ -24,7 +28,7 @@ namespace CommerceBit
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            UserInfo p = new UserInfo();
+            ForLogin p = new ForLogin();
             p.Url = txtUrl.Text;
             p.CompanyCode = txtCompanyCode.Text;
             p.UserName = txtUserName.Text;
@@ -54,13 +58,13 @@ namespace CommerceBit
                 return;
             }
 
-            if (true) //CanLogin(p)
+            if (CanLogin(p))
             {
                 niMessage.Icon = ProjectResource.Connected;
                 niMessage.Text = "CommerceBit Suite: Connected";
                 niMessage.ShowBalloonTip(1000, "Important Notification", "CommerceBit Suite: Connected", ToolTipIcon.Info);
 
-                ConnectedForm form = new ConnectedForm();
+                ConnectedForm form = new ConnectedForm(tokenInfo);
                 form.Show();
 
                 this.Hide();
@@ -75,7 +79,7 @@ namespace CommerceBit
         }
         private void btnTestCredentials_Click(object sender, EventArgs e)
         {
-            UserInfo p = new UserInfo();
+            ForLogin p = new ForLogin();
             p.Url = txtUrl.Text;
             p.CompanyCode = txtCompanyCode.Text;
             p.UserName = txtUserName.Text;
@@ -105,14 +109,13 @@ namespace CommerceBit
                 return;
             }
 
-            if (true) //CanLogin(p)
+            if (CanLogin(p))
             {
-                MessageBox.Show("User Credentials Exist.", "CommerceBit Suite", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                MessageBox.Show("Valid User Credentials.", "CommerceBit Suite", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("User Credentials Not Exist.", "CommerceBit Suite", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Invalid User Credentials.", "CommerceBit Suite", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void btnClose_Click(object sender, EventArgs e)
@@ -133,9 +136,9 @@ namespace CommerceBit
         }
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(niMessage.Text == "CommerceBit Suite: Connected")
+            if (tokenInfo.AccessToken!=null)
             {
-                ConnectedForm form = new ConnectedForm();
+                ConnectedForm form = new ConnectedForm(tokenInfo);
                 form.Show();
             }
             else
@@ -145,9 +148,9 @@ namespace CommerceBit
         }
         private void niMessage_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            if (niMessage.Text == "CommerceBit Suite: Connected")
+            if (tokenInfo.AccessToken != null)
             {
-                ConnectedForm form = new ConnectedForm();
+                ConnectedForm form = new ConnectedForm(tokenInfo);
                 form.Show();
             }
             else
@@ -160,15 +163,26 @@ namespace CommerceBit
 
         #region Private Functions
 
-        private async Task<bool> CanLogin(UserInfo p)
+        private bool CanLogin(ForLogin p)
         {
-
-            using (var client = new System.Net.Http.HttpClient())
+            try
             {
-                var serializedProduct = JsonConvert.SerializeObject(p);
-                var content = new StringContent(serializedProduct, Encoding.UTF8, "application/json");
-                var result = await client.PostAsync("URL", content);
-                if (result != null)
+                string baseAddress = p.Url;
+
+                var client = new HttpClient();
+
+                var form = new Dictionary<string, string>
+               {
+                   {"grant_type", "password"},
+                   {"username", p.UserName},
+                   {"password", p.Password},
+                   {"company", p.CompanyCode},
+               };
+
+                var tokenResponse = client.PostAsync(baseAddress + "token", new FormUrlEncodedContent(form)).Result;
+                tokenInfo = tokenResponse.Content.ReadAsAsync<Token>(new[] { new JsonMediaTypeFormatter() }).Result;
+
+                if (tokenInfo.AccessToken != null)
                 {
                     return true;
                 }
@@ -177,21 +191,9 @@ namespace CommerceBit
                     return false;
                 }
             }
-        }
-        private async void IsUserExist(UserInfo p)
-        {
-            using (var client = new System.Net.Http.HttpClient())
+            catch (Exception ex)
             {
-                using (var response = await client.GetAsync("Url"))
-                {
-                    if (response.IsSuccessStatusCode)
-                    {
-                        var productJsonString = await response.Content.ReadAsStringAsync();
-
-                        UserInfo data = JsonConvert.DeserializeObject<UserInfo>(productJsonString);
-
-                    }
-                }
+                return false;
             }
         }
 

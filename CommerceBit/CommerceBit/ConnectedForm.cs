@@ -12,13 +12,16 @@ namespace CommerceBit
 {
     public partial class ConnectedForm : Form
     {
-        public ConnectedForm()
+        Token tokenDetail;
+        public ConnectedForm(Token t)
         {
+            tokenDetail = t;
             InitializeComponent();
         }
 
         private void btnDisconnect_Click(object sender, EventArgs e)
         {
+            tokenDetail = new Token();
             MessageBox.Show("Disconnected Successfully.", "CommerceBit Suite", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Application.Exit();
             this.Close();

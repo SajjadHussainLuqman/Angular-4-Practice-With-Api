@@ -16,7 +16,7 @@ namespace CommerceBit
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CommerceBitForm());
+            Application.Run(new CommerceBitForm(new Token()));
         }
     }
 }

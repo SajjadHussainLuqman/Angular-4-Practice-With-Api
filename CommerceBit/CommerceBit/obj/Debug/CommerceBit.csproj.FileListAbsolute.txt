@@ -1,23 +1,26 @@
-c:\users\sajjad.hussain\documents\visual studio 2015\Projects\CommerceBit\CommerceBit\bin\Debug\CommerceBit.exe.config
-c:\users\sajjad.hussain\documents\visual studio 2015\Projects\CommerceBit\CommerceBit\obj\Debug\CommerceBit.csprojResolveAssemblyReference.cache
-c:\users\sajjad.hussain\documents\visual studio 2015\Projects\CommerceBit\CommerceBit\obj\Debug\CommerceBit.CommerceBitForm.resources
-c:\users\sajjad.hussain\documents\visual studio 2015\Projects\CommerceBit\CommerceBit\obj\Debug\CommerceBit.Properties.Resources.resources
-c:\users\sajjad.hussain\documents\visual studio 2015\Projects\CommerceBit\CommerceBit\obj\Debug\CommerceBit.csproj.GenerateResource.Cache
-c:\users\sajjad.hussain\documents\visual studio 2015\Projects\CommerceBit\CommerceBit\bin\Debug\CommerceBit.exe.manifest
-c:\users\sajjad.hussain\documents\visual studio 2015\Projects\CommerceBit\CommerceBit\bin\Debug\CommerceBit.application
-c:\users\sajjad.hussain\documents\visual studio 2015\Projects\CommerceBit\CommerceBit\bin\Debug\CommerceBit.exe
-c:\users\sajjad.hussain\documents\visual studio 2015\Projects\CommerceBit\CommerceBit\bin\Debug\CommerceBit.pdb
-c:\users\sajjad.hussain\documents\visual studio 2015\Projects\CommerceBit\CommerceBit\bin\Debug\Newtonsoft.Json.dll
-c:\users\sajjad.hussain\documents\visual studio 2015\Projects\CommerceBit\CommerceBit\bin\Debug\System.Net.Http.Formatting.dll
-c:\users\sajjad.hussain\documents\visual studio 2015\Projects\CommerceBit\CommerceBit\bin\Debug\Newtonsoft.Json.xml
-c:\users\sajjad.hussain\documents\visual studio 2015\Projects\CommerceBit\CommerceBit\bin\Debug\System.Net.Http.Formatting.xml
-c:\users\sajjad.hussain\documents\visual studio 2015\Projects\CommerceBit\CommerceBit\obj\Debug\CommerceBit.exe.manifest
-c:\users\sajjad.hussain\documents\visual studio 2015\Projects\CommerceBit\CommerceBit\obj\Debug\CommerceBit.application
-c:\users\sajjad.hussain\documents\visual studio 2015\Projects\CommerceBit\CommerceBit\obj\Debug\CommerceBit.exe
-c:\users\sajjad.hussain\documents\visual studio 2015\Projects\CommerceBit\CommerceBit\obj\Debug\CommerceBit.pdb
-c:\users\sajjad.hussain\documents\visual studio 2015\Projects\CommerceBit\CommerceBit\bin\Debug\Icons\Connected.ico
-c:\users\sajjad.hussain\documents\visual studio 2015\Projects\CommerceBit\CommerceBit\bin\Debug\Icons\Disconnected.ico
-c:\users\sajjad.hussain\documents\visual studio 2015\Projects\CommerceBit\CommerceBit\obj\Debug\CommerceBit.ProjectResource.resources
-c:\users\sajjad.hussain\documents\visual studio 2015\Projects\CommerceBit\CommerceBit\bin\Debug\Icons\CommerceBit.ico
-c:\users\sajjad.hussain\documents\visual studio 2015\Projects\CommerceBit\CommerceBit\bin\Debug\Icons\ecommerce1.png
-c:\users\sajjad.hussain\documents\visual studio 2015\Projects\CommerceBit\CommerceBit\obj\Debug\CommerceBit.ConnectedForm.resources
+C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\CommerceBit\CommerceBit\bin\Debug\Icons\CommerceBit.ico
+C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\CommerceBit\CommerceBit\bin\Debug\Icons\ecommerce1.png
+C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\CommerceBit\CommerceBit\bin\Debug\Icons\Connected.ico
+C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\CommerceBit\CommerceBit\bin\Debug\Icons\Disconnected.ico
+C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\CommerceBit\CommerceBit\bin\Debug\CommerceBit.exe.config
+C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\CommerceBit\CommerceBit\bin\Debug\CommerceBit.exe.manifest
+C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\CommerceBit\CommerceBit\bin\Debug\CommerceBit.application
+C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\CommerceBit\CommerceBit\bin\Debug\CommerceBit.exe
+C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\CommerceBit\CommerceBit\bin\Debug\CommerceBit.pdb
+C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\CommerceBit\CommerceBit\bin\Debug\Newtonsoft.Json.dll
+C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\CommerceBit\CommerceBit\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\CommerceBit\CommerceBit\bin\Debug\System.Net.Http.dll
+C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\CommerceBit\CommerceBit\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\CommerceBit\CommerceBit\bin\Debug\Newtonsoft.Json.xml
+C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\CommerceBit\CommerceBit\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\CommerceBit\CommerceBit\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\CommerceBit\CommerceBit\obj\Debug\CommerceBit.CommerceBitForm.resources
+C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\CommerceBit\CommerceBit\obj\Debug\CommerceBit.ConnectedForm.resources
+C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\CommerceBit\CommerceBit\obj\Debug\CommerceBit.ProjectResource.resources
+C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\CommerceBit\CommerceBit\obj\Debug\CommerceBit.Properties.Resources.resources
+C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\CommerceBit\CommerceBit\obj\Debug\CommerceBit.csproj.GenerateResource.Cache
+C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\CommerceBit\CommerceBit\obj\Debug\CommerceBit.exe.manifest
+C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\CommerceBit\CommerceBit\obj\Debug\CommerceBit.application
+C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\CommerceBit\CommerceBit\obj\Debug\CommerceBit.exe
+C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\CommerceBit\CommerceBit\obj\Debug\CommerceBit.pdb
+C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\CommerceBit\CommerceBit\obj\Debug\CommerceBit.csprojResolveAssemblyReference.cache
