@@ -87,6 +87,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Toolkit";
+            this.Load += new System.EventHandler(this.ConnectedForm_Load);
             this.SizeChanged += new System.EventHandler(this.ConnectedForm_SizeChanged);
             this.ResumeLayout(false);
 

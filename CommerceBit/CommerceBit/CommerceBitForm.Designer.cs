@@ -240,7 +240,8 @@
             // 
             this.logInToolStripMenuItem.Name = "logInToolStripMenuItem";
             this.logInToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
-            this.logInToolStripMenuItem.Text = "Log In";
+            this.logInToolStripMenuItem.Text = "Logout";
+            this.logInToolStripMenuItem.Click += new System.EventHandler(this.logInToolStripMenuItem_Click);
             // 
             // showPrintJobsToolStripMenuItem
             // 
@@ -288,7 +289,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(349, 360);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(349, 407);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;

@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="CommerceBit.exe" version="1.0.0.24" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="CommerceBit.exe" version="1.0.0.29" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="CommerceBit.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
     <assemblyIdentity name="CommerceBit" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
@@ -42,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CommerceBit.exe" size="27648">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CommerceBit.exe" size="142336">
       <assemblyIdentity name="CommerceBit" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>BUVUx0fiOToz/U4H8ouBVvIwT9d02u3gAnN75le1in4=</dsig:DigestValue>
+        <dsig:DigestValue>ruNAfCo0VHOE7/8zmUHKe1l5x8tJCqFee6UwtsTPzYg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -86,6 +87,51 @@
       <dsig:DigestValue>Rq7wrt7eSUw41cXEncr4p2P8Qe99yiihLTTXFk8NMU0=</dsig:DigestValue>
     </hash>
   </file>
+  <file name="CommerceBit.ico" size="2076">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>6jmEIVQOliipuiWMMtrgW3cKPxBnIY+tqfKJr/2ZqDU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="DLL\Newtonsoft.Json.dll" size="653824">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>lz/XDOSOWsQzoQG0KHFoDFHi/roq7sPUAN6kEVrzong=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="DLL\Newtonsoft.Json.xml" size="674087" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>QqVX+RLgUOkfJVlCxuaUj2rjrlkoAArR3O+IZmu3ei8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="DLL\System.Net.Http.Formatting.dll" size="185544">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>HH+pTeXnJ4UpNDh7awCUq8FvZgxskbOPs/W8WAz73B8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="DLL\System.Net.Http.Formatting.xml" size="192626" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>EW4DJmReuiXF2UbK2H+18skSGinfY+TSaL8cEQuSVtU=</dsig:DigestValue>
+    </hash>
+  </file>
   <file name="Icons\CommerceBit.ico" size="2076">
     <hash>
       <dsig:Transforms>
@@ -120,6 +166,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>oWifGLi0H71H5TrTSYdaBI23bqkqsVNnqJjBx6YD7p0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Icons\progressbar.gif" size="106637">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>jfA4aaqOBtt8AV6Qt4frozlq4YX1GgNjMwLebs1oOMc=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Icons\switch-off-icon.png" size="37921">

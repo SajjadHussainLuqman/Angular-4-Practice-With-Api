@@ -13,7 +13,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\sajjad.hussain\Desktop\Publish2\</PublishUrl>
+    <PublishUrl>C:\Users\Sajjad\Desktop\Publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -26,9 +26,10 @@
     <ProductName>CommerceBit Suite</ProductName>
     <PublisherName>CommerceBit Suite</PublisherName>
     <SuiteName>CommerceBit Suite</SuiteName>
-    <ApplicationRevision>25</ApplicationRevision>
+    <ApplicationRevision>29</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -63,16 +64,22 @@
   <PropertyGroup>
     <SignManifests>false</SignManifests>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>CommerceBit.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>CommerceBit.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
-      <Private>True</Private>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\System.Net.Http.Formatting.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -97,6 +104,12 @@
     <Compile Include="ConnectedForm.Designer.cs">
       <DependentUpon>ConnectedForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Loader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loader.Designer.cs">
+      <DependentUpon>Loader.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="ProjectResource.Designer.cs">
@@ -111,6 +124,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConnectedForm.resx">
       <DependentUpon>ConnectedForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loader.resx">
+      <DependentUpon>Loader.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProjectResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -152,6 +168,11 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CommerceBit.ico" />
+    <Content Include="DLL\Newtonsoft.Json.dll" />
+    <Content Include="DLL\Newtonsoft.Json.xml" />
+    <Content Include="DLL\System.Net.Http.Formatting.dll" />
+    <Content Include="DLL\System.Net.Http.Formatting.xml" />
     <Content Include="Icons\CommerceBit.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -164,8 +185,10 @@
     <Content Include="Icons\Disconnected.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Icons\progressbar.gif" />
     <Content Include="Icons\switch-off-icon.png" />
     <Content Include="Icons\switch-on-icon.png" />
+    <None Include="Resources\ProgressBar.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

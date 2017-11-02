@@ -1,7 +1,10 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Formatting;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CommerceBit
@@ -9,17 +12,18 @@ namespace CommerceBit
     public partial class CommerceBitForm : Form
     {
         Token tokenInfo;
+        ForLogin p;
         public CommerceBitForm(Token t)
         {
             tokenInfo = t;
             InitializeComponent();
+            p = new ForLogin();
         }
 
         #region Event Handlers
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private async void btnLogin_Click(object sender, EventArgs e)
         {
-            ForLogin p = new ForLogin();
             p.Url = txtUrl.Text;
             p.CompanyCode = txtCompanyCode.Text;
             p.UserName = txtUserName.Text;
@@ -49,7 +53,13 @@ namespace CommerceBit
                 return;
             }
 
-            if (CanLogin(p))
+            Loader popUp = new Loader();
+            popUp.Show(this);
+            this.Enabled = false;
+
+            Task<bool> IsCan = CanLogin();
+            bool CanLoginUser = await IsCan;
+            if (CanLoginUser)
             {
                 niMessage.Icon = ProjectResource.Connected;
                 niMessage.Text = "CommerceBit Suite: Connected";
@@ -67,10 +77,12 @@ namespace CommerceBit
                 niMessage.Text = "CommerceBit Suite: Disconnected";
                 MessageBox.Show("Invalid User Information.", "CommerceBit Suite", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            popUp.Close();
+            this.Enabled = true;
         }
-        private void btnTestCredentials_Click(object sender, EventArgs e)
+        private async void btnTestCredentials_Click(object sender, EventArgs e)
         {
-            ForLogin p = new ForLogin();
             p.Url = txtUrl.Text;
             p.CompanyCode = txtCompanyCode.Text;
             p.UserName = txtUserName.Text;
@@ -100,7 +112,13 @@ namespace CommerceBit
                 return;
             }
 
-            if (CanLogin(p))
+            Loader popUp = new Loader();
+            popUp.Show(this);
+            this.Enabled = false;
+
+            Task<bool> IsCan = CanLogin();
+            bool CanLoginUser = await IsCan;
+            if (CanLoginUser)
             {
                 MessageBox.Show("Valid User Credentials.", "CommerceBit Suite", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -108,6 +126,9 @@ namespace CommerceBit
             {
                 MessageBox.Show("Invalid User Credentials.", "CommerceBit Suite", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            popUp.Close();
+            this.Enabled = true;
         }
         private void btnClose_Click(object sender, EventArgs e)
         {
@@ -117,7 +138,7 @@ namespace CommerceBit
         {
             if (this.WindowState == FormWindowState.Minimized)
             {
-                niMessage.ShowBalloonTip(1000, "Important Notification", "Minimized Successfully", ToolTipIcon.Info);
+                //niMessage.ShowBalloonTip(1000, "Important Notification", "Minimized Successfully", ToolTipIcon.Info);
                 this.Hide();
             }
         }
@@ -154,10 +175,15 @@ namespace CommerceBit
 
         #region Private Functions
 
-        private bool CanLogin(ForLogin p)
+        private async Task<bool> CanLogin()
         {
             try
             {
+                p.Url = Regex.Replace(p.Url, @"\s+", string.Empty);
+                p.UserName = Regex.Replace(p.UserName, @"\s+", string.Empty);
+                p.Password = Regex.Replace(p.Password, @"\s+", string.Empty);
+                p.CompanyCode = Regex.Replace(p.CompanyCode, @"\s+", string.Empty);
+
                 string baseAddress = p.Url;
 
                 var client = new HttpClient();
@@ -169,10 +195,10 @@ namespace CommerceBit
                    {"password", p.Password},
                    {"company", p.CompanyCode},
                };
-
-                var tokenResponse = client.PostAsync(baseAddress + "token", new FormUrlEncodedContent(form)).Result;
-                tokenInfo = tokenResponse.Content.ReadAsAsync<Token>(new[] { new JsonMediaTypeFormatter() }).Result;
-
+                
+                HttpResponseMessage tokenResponse = await client.PostAsync(baseAddress + "token", new FormUrlEncodedContent(form)).ConfigureAwait(false);
+                tokenInfo = await tokenResponse.Content.ReadAsAsync<Token>(new[] { new JsonMediaTypeFormatter() });
+                
                 if (tokenInfo.AccessToken != null)
                 {
                     return true;
@@ -181,6 +207,8 @@ namespace CommerceBit
                 {
                     return false;
                 }
+
+                
             }
             catch (Exception ex)
             {
@@ -197,5 +225,17 @@ namespace CommerceBit
         }
 
         #endregion
+
+        private void logInToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            niMessage.Icon = ProjectResource.Disconnected;
+            niMessage.Text = "CommerceBit Suite: Disconnected";
+            
+
+            niMessage.ShowBalloonTip(1000, "Important Notification", "Logout Successfully", ToolTipIcon.Info);
+            ConnectedForm form = new ConnectedForm(new Token());
+            form.Show();
+        }
+
     }
 }

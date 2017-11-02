@@ -34,5 +34,15 @@ namespace CommerceBit
                 this.Hide();
             }
         }
+
+        private void ConnectedForm_Load(object sender, EventArgs e)
+        {
+            if(tokenDetail.AccessToken==null)
+            {
+                this.Close();
+                CommerceBitForm form = new CommerceBitForm(new Token());
+                form.Show();
+            }
+        }
     }
 }
