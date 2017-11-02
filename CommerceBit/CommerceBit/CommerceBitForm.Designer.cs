@@ -265,7 +265,8 @@
             // 
             this.printTestLabelToolStripMenuItem.Name = "printTestLabelToolStripMenuItem";
             this.printTestLabelToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
-            this.printTestLabelToolStripMenuItem.Text = "Print Test Label";
+            this.printTestLabelToolStripMenuItem.Text = "Print Test Label/Invoice";
+            this.printTestLabelToolStripMenuItem.Click += new System.EventHandler(this.printTestLabelToolStripMenuItem_Click);
             // 
             // helpAboutToolStripMenuItem
             // 
@@ -289,7 +290,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(349, 407);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.groupBox1);
@@ -300,6 +301,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Toolkit";
+            this.Load += new System.EventHandler(this.CommerceBitForm_Load);
             this.SizeChanged += new System.EventHandler(this.CommerceBitForm_SizeChanged);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

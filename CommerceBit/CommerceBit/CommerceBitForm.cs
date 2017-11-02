@@ -18,10 +18,14 @@ namespace CommerceBit
             tokenInfo = t;
             InitializeComponent();
             p = new ForLogin();
+            MenuItemsShowHide(false);
         }
 
         #region Event Handlers
+        private void CommerceBitForm_Load(object sender, EventArgs e)
+        {
 
+        }
         private async void btnLogin_Click(object sender, EventArgs e)
         {
             p.Url = txtUrl.Text;
@@ -70,6 +74,8 @@ namespace CommerceBit
 
                 this.Hide();
                 ClearAll();
+                MenuItemsShowHide(true);
+
             }
             else
             {
@@ -237,5 +243,21 @@ namespace CommerceBit
             form.Show();
         }
 
+        private void printTestLabelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PrintTestLabel form = new PrintTestLabel(tokenInfo);
+            form.Show(this);
+        }
+
+        
+
+        private void MenuItemsShowHide(bool IsDisplay)
+        {
+            logInToolStripMenuItem.Visible = IsDisplay;
+            showPrintJobsToolStripMenuItem.Visible = IsDisplay;
+            showLogsToolStripMenuItem.Visible = IsDisplay;
+            openSavedLabelsFolderToolStripMenuItem.Visible = IsDisplay;
+            printTestLabelToolStripMenuItem.Visible = IsDisplay;
+        }
     }
 }
