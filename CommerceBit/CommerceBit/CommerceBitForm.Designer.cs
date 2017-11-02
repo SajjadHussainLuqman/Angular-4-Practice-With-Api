@@ -52,7 +52,6 @@
             this.showLogsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openSavedLabelsFolderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.printTestLabelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpAboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
@@ -218,7 +217,6 @@
             this.showLogsToolStripMenuItem,
             this.openSavedLabelsFolderToolStripMenuItem,
             this.printTestLabelToolStripMenuItem,
-            this.helpAboutToolStripMenuItem,
             this.toolStripSeparator2,
             this.exitToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
@@ -267,12 +265,6 @@
             this.printTestLabelToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
             this.printTestLabelToolStripMenuItem.Text = "Print Test Label/Invoice";
             this.printTestLabelToolStripMenuItem.Click += new System.EventHandler(this.printTestLabelToolStripMenuItem_Click);
-            // 
-            // helpAboutToolStripMenuItem
-            // 
-            this.helpAboutToolStripMenuItem.Name = "helpAboutToolStripMenuItem";
-            this.helpAboutToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
-            this.helpAboutToolStripMenuItem.Text = "Help/About";
             // 
             // toolStripSeparator2
             // 
@@ -333,7 +325,6 @@
         private System.Windows.Forms.ToolStripMenuItem showLogsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem openSavedLabelsFolderToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem printTestLabelToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem helpAboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
     }
