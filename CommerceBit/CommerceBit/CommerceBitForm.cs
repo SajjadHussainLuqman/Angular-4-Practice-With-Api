@@ -79,6 +79,7 @@ namespace CommerceBit
             }
             else
             {
+                MenuItemsShowHide(false);
                 niMessage.Icon = ProjectResource.Disconnected;
                 niMessage.Text = "CommerceBit Suite: Disconnected";
                 MessageBox.Show("Invalid User Information.", "CommerceBit Suite", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -234,6 +235,8 @@ namespace CommerceBit
 
         private void logInToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            MenuItemsShowHide(false);
+
             niMessage.Icon = ProjectResource.Disconnected;
             niMessage.Text = "CommerceBit Suite: Disconnected";
             

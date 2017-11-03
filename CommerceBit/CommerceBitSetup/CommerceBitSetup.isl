@@ -1149,7 +1149,7 @@
 		<row><td>ISMyProductDir</td><td>ISMyCompanyDir</td><td>MYPROD~1|My Product Name</td><td/><td>0</td><td/></row>
 		<row><td>ISYourDataBaseDir</td><td>INSTALLDIR</td><td>Database</td><td/><td>0</td><td/></row>
 		<row><td>LocalAppDataFolder</td><td>TARGETDIR</td><td>.:LocalA~1|LocalAppData</td><td/><td>0</td><td/></row>
-		<row><td>MY_PRODUCT_NAME</td><td>COMMERCEBIT_SUITE</td><td>MYPROD~1|My Product Name</td><td/><td>0</td><td/></row>
+		<row><td>MY_PRODUCT_NAME</td><td>COMMERCEBIT_SUITE</td><td>COMMER~1|CommerceBit Files</td><td/><td>0</td><td/></row>
 		<row><td>MyPicturesFolder</td><td>TARGETDIR</td><td>.:MyPict~1|MyPictures</td><td/><td>0</td><td/></row>
 		<row><td>NetHoodFolder</td><td>TARGETDIR</td><td>.:NetHood</td><td/><td>0</td><td/></row>
 		<row><td>PersonalFolder</td><td>TARGETDIR</td><td>.:Personal</td><td/><td>0</td><td/></row>
@@ -1898,6 +1898,7 @@
 	<table name="ISAssistantTag">
 		<col key="yes" def="s72">Tag</col>
 		<col def="S255">Data</col>
+		<row><td>CommerceBit.exe</td><td/></row>
 		<row><td>PROJECT_ASSISTANT_DEFAULT_FEATURE</td><td>AlwaysInstall</td></row>
 		<row><td>RegistryPageEnabled</td><td>No</td></row>
 	</table>
@@ -2617,7 +2618,7 @@
 		<col def="I2">Encoded</col>
 		<col def="S0">Comment</col>
 		<col def="I4">TimeStamp</col>
-		<row><td>COMPANY_NAME</td><td>1033</td><td>CommerceBit Suite</td><td>0</td><td/><td>497394884</td></row>
+		<row><td>COMPANY_NAME</td><td>1033</td><td>CommerceBit Suite</td><td>0</td><td/><td>497376932</td></row>
 		<row><td>DN_AlwaysInstall</td><td>1033</td><td>Always Install</td><td>0</td><td/><td>497403491</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_COLOR</td><td>1033</td><td>The color settings of your system are not adequate for running [ProductName].</td><td>0</td><td/><td>497403491</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_OS</td><td>1033</td><td>The operating system is not adequate for running [ProductName].</td><td>0</td><td/><td>497403491</td></row>
@@ -3720,8 +3721,8 @@
 		<row><td>IDS__TargetReq_DESC_RAM</td><td>1033</td><td>The amount of RAM is not adequate for running [ProductName].</td><td>0</td><td/><td>497403491</td></row>
 		<row><td>IDS__TargetReq_DESC_RESOLUTION</td><td>1033</td><td>The screen resolution is not adequate for running [ProductName].</td><td>0</td><td/><td>497403491</td></row>
 		<row><td>ID_STRING1</td><td>1033</td><td/><td>0</td><td/><td>497405539</td></row>
-		<row><td>ID_STRING2</td><td>1033</td><td>http://www.CommerceBitSuite.com</td><td>0</td><td/><td>497394884</td></row>
-		<row><td>ID_STRING3</td><td>1033</td><td>CommerceBit Suite</td><td>0</td><td/><td>497394884</td></row>
+		<row><td>ID_STRING2</td><td>1033</td><td>http://www.CommerceBitSuite.com</td><td>0</td><td/><td>497376932</td></row>
+		<row><td>ID_STRING3</td><td>1033</td><td>CommerceBit Suite</td><td>0</td><td/><td>497376932</td></row>
 		<row><td>ID_STRING4</td><td>1033</td><td>Launch |Built</td><td>0</td><td/><td>497387363</td></row>
 		<row><td>ID_STRING5</td><td>1033</td><td>LAUNCH~1.EXE|Launch CommerceBit.exe</td><td>0</td><td/><td>497373476</td></row>
 		<row><td>IIDS_UITEXT_FeatureUninstalled</td><td>1033</td><td>This feature will remain uninstalled.</td><td>0</td><td/><td>497403491</td></row>
@@ -3839,8 +3840,8 @@
 		<col def="S255">ISBuildSourcePath</col>
 		<col def="I2">ISIconIndex</col>
 		<row><td>ARPPRODUCTICON.exe</td><td/><td>&lt;VSSolutionFolder&gt;\CommerceBit\Icons\CommerceBit.ico</td><td>0</td></row>
-		<row><td>CommerceBit.exe1_76011C356A634671B74303E72D2FEEDC.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
-		<row><td>CommerceBit.exe_63D96054B15C4B9C8189BC98A0176037.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
+		<row><td>CommerceBit.exe1_E82450A867684AD0BD633E16CAC45D60.exe</td><td/><td>&lt;VSSolutionFolder&gt;\CommerceBit\Icons\CommerceBit.ico</td><td>0</td></row>
+		<row><td>CommerceBit.exe_57960873E643495B8E16FA938B8B1A5C.exe</td><td/><td>&lt;VSSolutionFolder&gt;\CommerceBit\Icons\CommerceBit.ico</td><td>0</td></row>
 	</table>
 
 	<table name="IniFile">
@@ -3955,8 +3956,8 @@
 		<col def="S0">Value</col>
 		<row><td>ActiveLanguage</td><td>1033</td></row>
 		<row><td>Comments</td><td/></row>
-		<row><td>CurrentMedia</td><td dt:dt="bin.base64" md5="de9f554a3bc05c12be9c31b998217995">
-UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
+		<row><td>CurrentMedia</td><td dt:dt="bin.base64" md5="a4f66fafb30885f14d732b73e196bba0">
+RABWAEQALQA1AAEARQB4AHAAcgBlAHMAcwA=
 			</td></row>
 		<row><td>DefaultProductConfiguration</td><td>Express</td></row>
 		<row><td>EnableSwidtag</td><td>1</td></row>
@@ -3973,7 +3974,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>ISTheme</td><td>InstallShield Blue.theme</td></row>
 		<row><td>ISUSLock</td><td>{F80A8206-F399-417F-BF3F-DBAED2EA12BE}</td></row>
 		<row><td>ISUSSignature</td><td>{4520D409-E9CE-4E18-8458-0DAF6EEE216C}</td></row>
-		<row><td>ISVisitedViews</td><td>viewAssistant,viewProject,viewUpdateService,viewAppFiles,viewUpgradePaths,viewSystemSearch,viewISToday,viewShortcuts,viewFileExtensions,viewUI</td></row>
+		<row><td>ISVisitedViews</td><td>viewAssistant,viewProject,viewUpdateService,viewAppFiles,viewUpgradePaths,viewSystemSearch,viewISToday,viewShortcuts,viewFileExtensions,viewUI,viewObjects,viewEnvironmentVariables,viewVRoots,viewServices,viewCustomActions,viewRelease</td></row>
 		<row><td>Limited</td><td>1</td></row>
 		<row><td>LockPermissionMode</td><td>1</td></row>
 		<row><td>MsiExecCmdLineOptions</td><td/></row>
@@ -4509,8 +4510,8 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S255">ISComments</col>
 		<col def="S255">ISShortcutName</col>
 		<col def="I4">ISAttributes</col>
-		<row><td>CommerceBit.exe</td><td>commer_1_commercebitsetup</td><td>##IDS_SHORTCUT_DISPLAY_NAME2##</td><td>CommerceBit.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>CommerceBit.exe_63D96054B15C4B9C8189BC98A0176037.exe</td><td>0</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
-		<row><td>CommerceBit.exe1</td><td>DesktopFolder</td><td>##IDS_SHORTCUT_DISPLAY_NAME2##</td><td>CommerceBit.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>CommerceBit.exe1_76011C356A634671B74303E72D2FEEDC.exe</td><td>0</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>CommerceBit.exe</td><td>commer_1_commercebitsetup</td><td>##IDS_SHORTCUT_DISPLAY_NAME2##</td><td>CommerceBit.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>CommerceBit.exe_57960873E643495B8E16FA938B8B1A5C.exe</td><td>0</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>CommerceBit.exe1</td><td>DesktopFolder</td><td>##IDS_SHORTCUT_DISPLAY_NAME2##</td><td>CommerceBit.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>CommerceBit.exe1_E82450A867684AD0BD633E16CAC45D60.exe</td><td>0</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="Signature">
