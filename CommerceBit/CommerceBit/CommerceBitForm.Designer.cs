@@ -52,6 +52,10 @@
             this.showLogsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openSavedLabelsFolderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.printTestLabelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.packingSlipsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.orderSummaryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.picklistToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
@@ -217,64 +221,95 @@
             this.showLogsToolStripMenuItem,
             this.openSavedLabelsFolderToolStripMenuItem,
             this.printTestLabelToolStripMenuItem,
+            this.toolStripMenuItem1,
             this.toolStripSeparator2,
             this.exitToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(210, 192);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(229, 214);
             // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
             this.openToolStripMenuItem.Text = "Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(206, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(225, 6);
             // 
             // logInToolStripMenuItem
             // 
             this.logInToolStripMenuItem.Name = "logInToolStripMenuItem";
-            this.logInToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.logInToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
             this.logInToolStripMenuItem.Text = "Logout";
             this.logInToolStripMenuItem.Click += new System.EventHandler(this.logInToolStripMenuItem_Click);
             // 
             // showPrintJobsToolStripMenuItem
             // 
             this.showPrintJobsToolStripMenuItem.Name = "showPrintJobsToolStripMenuItem";
-            this.showPrintJobsToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
-            this.showPrintJobsToolStripMenuItem.Text = "Show Print Jobs";
+            this.showPrintJobsToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
+            this.showPrintJobsToolStripMenuItem.Text = "Show Printed Invoices/Labels";
+            this.showPrintJobsToolStripMenuItem.Click += new System.EventHandler(this.showPrintJobsToolStripMenuItem_Click);
             // 
             // showLogsToolStripMenuItem
             // 
             this.showLogsToolStripMenuItem.Name = "showLogsToolStripMenuItem";
-            this.showLogsToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.showLogsToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
             this.showLogsToolStripMenuItem.Text = "Show Logs";
             // 
             // openSavedLabelsFolderToolStripMenuItem
             // 
             this.openSavedLabelsFolderToolStripMenuItem.Name = "openSavedLabelsFolderToolStripMenuItem";
-            this.openSavedLabelsFolderToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.openSavedLabelsFolderToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
             this.openSavedLabelsFolderToolStripMenuItem.Text = "Open Saved Labels Folder";
             // 
             // printTestLabelToolStripMenuItem
             // 
             this.printTestLabelToolStripMenuItem.Name = "printTestLabelToolStripMenuItem";
-            this.printTestLabelToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.printTestLabelToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
             this.printTestLabelToolStripMenuItem.Text = "Print Test Label/Invoice";
             this.printTestLabelToolStripMenuItem.Click += new System.EventHandler(this.printTestLabelToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.packingSlipsToolStripMenuItem,
+            this.orderSummaryToolStripMenuItem,
+            this.picklistToolStripMenuItem});
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(228, 22);
+            this.toolStripMenuItem1.Text = "Print";
+            // 
+            // packingSlipsToolStripMenuItem
+            // 
+            this.packingSlipsToolStripMenuItem.Name = "packingSlipsToolStripMenuItem";
+            this.packingSlipsToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.packingSlipsToolStripMenuItem.Text = "Packing Slips";
+            this.packingSlipsToolStripMenuItem.Click += new System.EventHandler(this.packingSlipsToolStripMenuItem_Click);
+            // 
+            // orderSummaryToolStripMenuItem
+            // 
+            this.orderSummaryToolStripMenuItem.Name = "orderSummaryToolStripMenuItem";
+            this.orderSummaryToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.orderSummaryToolStripMenuItem.Text = "Order Summary";
+            // 
+            // picklistToolStripMenuItem
+            // 
+            this.picklistToolStripMenuItem.Name = "picklistToolStripMenuItem";
+            this.picklistToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.picklistToolStripMenuItem.Text = "Pick List";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(206, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(225, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -327,6 +362,10 @@
         private System.Windows.Forms.ToolStripMenuItem printTestLabelToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem packingSlipsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem orderSummaryToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem picklistToolStripMenuItem;
     }
 }
 

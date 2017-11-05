@@ -1068,6 +1068,7 @@
 		<row><td>ISSelfRegisterCosting</td><td>1</td><td>ISSELFREG.DLL</td><td>ISSelfRegisterCosting</td><td/><td/></row>
 		<row><td>ISSelfRegisterFiles</td><td>3073</td><td>ISSELFREG.DLL</td><td>ISSelfRegisterFiles</td><td/><td/></row>
 		<row><td>ISSelfRegisterFinalize</td><td>1</td><td>ISSELFREG.DLL</td><td>ISSelfRegisterFinalize</td><td/><td/></row>
+		<row><td>ISSetAllUsers</td><td>257</td><td>SetAllUsers.dll</td><td>SetAllUsers</td><td/><td/></row>
 		<row><td>ISUnSelfRegisterFiles</td><td>3073</td><td>ISSELFREG.DLL</td><td>ISUnSelfRegisterFiles</td><td/><td/></row>
 		<row><td>SetARPINSTALLLOCATION</td><td>51</td><td>ARPINSTALLLOCATION</td><td>[INSTALLDIR]</td><td/><td/></row>
 		<row><td>SetAllUsersProfileNT</td><td>51</td><td>ALLUSERSPROFILE</td><td>[%SystemRoot]\Profiles\All Users</td><td/><td/></row>
@@ -3842,6 +3843,7 @@
 		<row><td>ARPPRODUCTICON.exe</td><td/><td>&lt;VSSolutionFolder&gt;\CommerceBit\Icons\CommerceBit.ico</td><td>0</td></row>
 		<row><td>CommerceBit.exe1_E82450A867684AD0BD633E16CAC45D60.exe</td><td/><td>&lt;VSSolutionFolder&gt;\CommerceBit\Icons\CommerceBit.ico</td><td>0</td></row>
 		<row><td>CommerceBit.exe_57960873E643495B8E16FA938B8B1A5C.exe</td><td/><td>&lt;VSSolutionFolder&gt;\CommerceBit\Icons\CommerceBit.ico</td><td>0</td></row>
+		<row><td>UNINST_Uninstall_C_0227E3B3E640449286B9C4F503BD785F.exe</td><td/><td>C:\Program Files (x86)\InstallShield\2015LE\Redist\Language Independent\OS Independent\uninstall.ico</td><td>0</td></row>
 	</table>
 
 	<table name="IniFile">
@@ -3887,6 +3889,7 @@
 		<row><td>ISSelfRegisterCosting</td><td/><td>2201</td><td/><td/></row>
 		<row><td>ISSelfRegisterFiles</td><td/><td>5601</td><td/><td/></row>
 		<row><td>ISSelfRegisterFinalize</td><td/><td>6601</td><td/><td/></row>
+		<row><td>ISSetAllUsers</td><td>Not Installed</td><td>10</td><td/><td/></row>
 		<row><td>ISUnSelfRegisterFiles</td><td/><td>2202</td><td/><td/></row>
 		<row><td>InstallFiles</td><td/><td>4000</td><td>InstallFiles</td><td/></row>
 		<row><td>InstallFinalize</td><td/><td>6600</td><td>InstallFinalize</td><td/></row>
@@ -3918,7 +3921,7 @@
 		<row><td>RegisterUser</td><td/><td>6000</td><td>RegisterUser</td><td/></row>
 		<row><td>RemoveDuplicateFiles</td><td/><td>3400</td><td>RemoveDuplicateFiles</td><td/></row>
 		<row><td>RemoveEnvironmentStrings</td><td/><td>3300</td><td>RemoveEnvironmentStrings</td><td/></row>
-		<row><td>RemoveExistingProducts</td><td/><td>1410</td><td>RemoveExistingProducts</td><td/></row>
+		<row><td>RemoveExistingProducts</td><td/><td>6601</td><td>RemoveExistingProducts</td><td/></row>
 		<row><td>RemoveFiles</td><td/><td>3500</td><td>RemoveFiles</td><td/></row>
 		<row><td>RemoveFolders</td><td/><td>3600</td><td>RemoveFolders</td><td/></row>
 		<row><td>RemoveIniValues</td><td/><td>3100</td><td>RemoveIniValues</td><td/></row>
@@ -3974,7 +3977,7 @@ RABWAEQALQA1AAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>ISTheme</td><td>InstallShield Blue.theme</td></row>
 		<row><td>ISUSLock</td><td>{F80A8206-F399-417F-BF3F-DBAED2EA12BE}</td></row>
 		<row><td>ISUSSignature</td><td>{4520D409-E9CE-4E18-8458-0DAF6EEE216C}</td></row>
-		<row><td>ISVisitedViews</td><td>viewAssistant,viewProject,viewUpdateService,viewAppFiles,viewUpgradePaths,viewSystemSearch,viewISToday,viewShortcuts,viewFileExtensions,viewUI,viewObjects,viewEnvironmentVariables,viewVRoots,viewServices,viewCustomActions,viewRelease</td></row>
+		<row><td>ISVisitedViews</td><td>viewAssistant,viewProject,viewUpdateService,viewAppFiles,viewUpgradePaths,viewSystemSearch,viewISToday,viewShortcuts,viewFileExtensions,viewUI,viewObjects,viewEnvironmentVariables,viewVRoots,viewServices,viewCustomActions,viewRelease,viewLearnMore</td></row>
 		<row><td>Limited</td><td>1</td></row>
 		<row><td>LockPermissionMode</td><td>1</td></row>
 		<row><td>MsiExecCmdLineOptions</td><td/></row>
@@ -4004,6 +4007,7 @@ RABWAEQALQA1AAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>FileCost</td><td/><td>900</td><td>FileCost</td><td/></row>
 		<row><td>FindRelatedProducts</td><td/><td>430</td><td>FindRelatedProducts</td><td/></row>
 		<row><td>ISPreventDowngrade</td><td>ISFOUNDNEWERPRODUCTVERSION</td><td>450</td><td>ISPreventDowngrade</td><td/></row>
+		<row><td>ISSetAllUsers</td><td>Not Installed</td><td>10</td><td/><td/></row>
 		<row><td>InstallWelcome</td><td>Not Installed</td><td>1210</td><td>InstallWelcome</td><td/></row>
 		<row><td>IsolateComponents</td><td/><td>950</td><td>IsolateComponents</td><td/></row>
 		<row><td>LaunchConditions</td><td>Not Installed</td><td>410</td><td>LaunchConditions</td><td/></row>
@@ -4320,6 +4324,7 @@ RABWAEQALQA1AAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>InstallChoice</td><td>AR</td><td/></row>
 		<row><td>LAUNCHPROGRAM</td><td>1</td><td/></row>
 		<row><td>LAUNCHREADME</td><td>1</td><td/></row>
+		<row><td>MSIFASTINSTALL</td><td>0</td><td/></row>
 		<row><td>Manufacturer</td><td>##COMPANY_NAME##</td><td/></row>
 		<row><td>PIDKEY</td><td/><td/></row>
 		<row><td>PIDTemplate</td><td>12345&lt;###-%%%%%%%&gt;@@@@@</td><td/></row>
@@ -4425,6 +4430,7 @@ RABWAEQALQA1AAEARQB4AHAAcgBlAHMAcwA=
 		<col def="s72">DirProperty</col>
 		<col def="i2">InstallMode</col>
 		<row><td>CommerceBit.exe</td><td>CommerceBit.exe</td><td/><td>commer_1_commercebitsetup</td><td>2</td></row>
+		<row><td>UNINST_Uninstall_CommerceBitSetup</td><td>IS_ININSTALL_SHORTCUT</td><td/><td>commer_1_commercebitsetup</td><td>2</td></row>
 	</table>
 
 	<table name="RemoveIniFile">
@@ -4512,6 +4518,7 @@ RABWAEQALQA1AAEARQB4AHAAcgBlAHMAcwA=
 		<col def="I4">ISAttributes</col>
 		<row><td>CommerceBit.exe</td><td>commer_1_commercebitsetup</td><td>##IDS_SHORTCUT_DISPLAY_NAME2##</td><td>CommerceBit.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>CommerceBit.exe_57960873E643495B8E16FA938B8B1A5C.exe</td><td>0</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
 		<row><td>CommerceBit.exe1</td><td>DesktopFolder</td><td>##IDS_SHORTCUT_DISPLAY_NAME2##</td><td>CommerceBit.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>CommerceBit.exe1_E82450A867684AD0BD633E16CAC45D60.exe</td><td>0</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>UNINST_Uninstall_CommerceBitSetup</td><td>commer_1_commercebitsetup</td><td>UNINST|Uninstall CommerceBitSetup</td><td>IS_ININSTALL_SHORTCUT</td><td>[SystemFolder]msiexec.exe</td><td>/x {D10EE557-3B68-4E8B-9A90-6AC140BCC705}</td><td/><td/><td>UNINST_Uninstall_C_0227E3B3E640449286B9C4F503BD785F.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="Signature">

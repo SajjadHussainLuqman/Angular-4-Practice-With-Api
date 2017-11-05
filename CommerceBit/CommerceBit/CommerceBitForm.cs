@@ -12,12 +12,12 @@ namespace CommerceBit
     public partial class CommerceBitForm : Form
     {
         Token tokenInfo;
-        ForLogin p;
+        LoginCredentials p;
         public CommerceBitForm(Token t)
         {
             tokenInfo = t;
             InitializeComponent();
-            p = new ForLogin();
+            p = new LoginCredentials();
             MenuItemsShowHide(false);
         }
 
@@ -71,6 +71,7 @@ namespace CommerceBit
 
                 ConnectedForm form = new ConnectedForm(tokenInfo);
                 form.Show();
+                form.WindowState = FormWindowState.Normal;
 
                 this.Hide();
                 ClearAll();
@@ -145,7 +146,6 @@ namespace CommerceBit
         {
             if (this.WindowState == FormWindowState.Minimized)
             {
-                //niMessage.ShowBalloonTip(1000, "Important Notification", "Minimized Successfully", ToolTipIcon.Info);
                 this.Hide();
             }
         }
@@ -159,10 +159,13 @@ namespace CommerceBit
             {
                 ConnectedForm form = new ConnectedForm(tokenInfo);
                 form.Show();
+                form.WindowState = FormWindowState.Normal;
+
             }
             else
             {
                 this.Show();
+                this.WindowState = FormWindowState.Normal;
             }
         }
         private void niMessage_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -171,13 +174,54 @@ namespace CommerceBit
             {
                 ConnectedForm form = new ConnectedForm(tokenInfo);
                 form.Show();
+                form.WindowState = FormWindowState.Normal;
             }
             else
             {
                 this.Show();
+                this.WindowState = FormWindowState.Normal;
             }
         }
+        private void logInToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MenuItemsShowHide(false);
 
+            niMessage.Icon = ProjectResource.Disconnected;
+            niMessage.Text = "CommerceBit Suite: Disconnected";
+
+
+            niMessage.ShowBalloonTip(1000, "Important Notification", "Logout Successfully", ToolTipIcon.Info);
+            ConnectedForm form = new ConnectedForm(new Token());
+            form.Show();
+        }
+        private void printTestLabelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PrintTestLabel form = new PrintTestLabel(tokenInfo);
+            form.Show(this);
+            form.WindowState = FormWindowState.Normal;
+
+        }
+        private void packingSlipsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PrinterSettingsForm form = new PrinterSettingsForm(tokenInfo);
+            form.Show(this);
+            form.WindowState = FormWindowState.Normal;
+        }
+        private void showPrintJobsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PrintedInvoicesLabelsForm form = new PrintedInvoicesLabelsForm();
+            form.Show(this);
+            form.WindowState = FormWindowState.Normal;
+        }
+        private void MenuItemsShowHide(bool IsDisplay)
+        {
+            logInToolStripMenuItem.Visible = IsDisplay;
+            showPrintJobsToolStripMenuItem.Visible = IsDisplay;
+            showLogsToolStripMenuItem.Visible = IsDisplay;
+            openSavedLabelsFolderToolStripMenuItem.Visible = IsDisplay;
+            printTestLabelToolStripMenuItem.Visible = IsDisplay;
+        }
+      
         #endregion
 
         #region Private Functions
@@ -232,35 +276,6 @@ namespace CommerceBit
         }
 
         #endregion
-
-        private void logInToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MenuItemsShowHide(false);
-
-            niMessage.Icon = ProjectResource.Disconnected;
-            niMessage.Text = "CommerceBit Suite: Disconnected";
-            
-
-            niMessage.ShowBalloonTip(1000, "Important Notification", "Logout Successfully", ToolTipIcon.Info);
-            ConnectedForm form = new ConnectedForm(new Token());
-            form.Show();
-        }
-
-        private void printTestLabelToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            PrintTestLabel form = new PrintTestLabel(tokenInfo);
-            form.Show(this);
-        }
-
-        
-
-        private void MenuItemsShowHide(bool IsDisplay)
-        {
-            logInToolStripMenuItem.Visible = IsDisplay;
-            showPrintJobsToolStripMenuItem.Visible = IsDisplay;
-            showLogsToolStripMenuItem.Visible = IsDisplay;
-            openSavedLabelsFolderToolStripMenuItem.Visible = IsDisplay;
-            printTestLabelToolStripMenuItem.Visible = IsDisplay;
-        }
+       
     }
 }

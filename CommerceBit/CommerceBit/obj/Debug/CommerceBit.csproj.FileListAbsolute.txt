@@ -47,3 +47,8 @@ C:\Users\Sajjad\Documents\GitHub\MyPracticeProject\CommerceBit\CommerceBit\obj\D
 C:\Users\Sajjad\Documents\GitHub\MyPracticeProject\CommerceBit\CommerceBit\obj\Debug\CommerceBit.application
 C:\Users\Sajjad\Documents\GitHub\MyPracticeProject\CommerceBit\CommerceBit\obj\Debug\CommerceBit.exe
 C:\Users\Sajjad\Documents\GitHub\MyPracticeProject\CommerceBit\CommerceBit\obj\Debug\CommerceBit.pdb
+C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\CommerceBit\CommerceBit\bin\Debug\Images\labelImage.jpg
+C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\CommerceBit\CommerceBit\obj\Debug\CommerceBit.PrinterSettingsForm.resources
+C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\CommerceBit\CommerceBit\obj\Debug\CommerceBit.PrintTestLabel.resources
+C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\CommerceBit\CommerceBit\obj\Debug\CommerceBit.Loader.resources
+C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\CommerceBit\CommerceBit\obj\Debug\CommerceBit.PrintedInvoicesLabelsForm.resources

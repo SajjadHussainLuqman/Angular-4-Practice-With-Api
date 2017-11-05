@@ -13,7 +13,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\Sajjad\Desktop\Publish\</PublishUrl>
+    <PublishUrl>C:\Users\sajjad.hussain\Desktop\Publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -26,7 +26,7 @@
     <ProductName>CommerceBit Suite</ProductName>
     <PublisherName>CommerceBit Suite</PublisherName>
     <SuiteName>CommerceBit Suite</SuiteName>
-    <ApplicationRevision>34</ApplicationRevision>
+    <ApplicationRevision>36</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -99,6 +99,18 @@
     <Compile Include="CommerceBitForm.Designer.cs">
       <DependentUpon>CommerceBitForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="PrintedInvoicesLabelsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintedInvoicesLabelsForm.Designer.cs">
+      <DependentUpon>PrintedInvoicesLabelsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrinterSettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrinterSettingsForm.Designer.cs">
+      <DependentUpon>PrinterSettingsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PrintTestLabelForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,9 +137,14 @@
       <DependentUpon>ProjectResource.resx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Token.cs" />
     <EmbeddedResource Include="CommerceBitForm.resx">
       <DependentUpon>CommerceBitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintedInvoicesLabelsForm.resx">
+      <DependentUpon>PrintedInvoicesLabelsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrinterSettingsForm.resx">
+      <DependentUpon>PrinterSettingsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PrintTestLabelForm.resx">
       <DependentUpon>PrintTestLabelForm.cs</DependentUpon>
@@ -200,7 +217,6 @@
     <Content Include="Images\labelImage.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="Resources\ProgressBar.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
