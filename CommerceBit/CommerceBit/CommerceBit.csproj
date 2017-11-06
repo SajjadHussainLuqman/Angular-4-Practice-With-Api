@@ -26,7 +26,7 @@
     <ProductName>CommerceBit Suite</ProductName>
     <PublisherName>CommerceBit Suite</PublisherName>
     <SuiteName>CommerceBit Suite</SuiteName>
-    <ApplicationRevision>36</ApplicationRevision>
+    <ApplicationRevision>37</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
