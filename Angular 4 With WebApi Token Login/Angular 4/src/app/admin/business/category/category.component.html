@@ -1,0 +1,58 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+  
+  <!-- Main content -->
+  <section class="content">
+
+    <!-- Default box -->
+    <div class="box">
+      <div class="box-header with-border">
+        <h3 class="box-title">Category</h3>
+      </div>
+      
+      <div class="box-body">
+        <table class="table">
+          <tr *ngFor="let c of categoryList">
+            <td>{{c.CategoryId}}</td>
+            <td>{{c.Name}}</td>
+            <td>{{c.IsActive}}</td>
+            <td><button (click)="Update(c)">Update</button></td>
+            <td><button (click)="Edit(c.CategoryId)">Edit</button></td>
+            <td><button (click)="Delete(c)">Delete</button></td>
+          </tr>
+          <tr *ngIf="!categoryList || categoryList.length==0">
+            <td >
+                No category to display
+            </td>
+        </tr>
+        </table>
+      </div>
+      <div class="box-body">
+        <form #AddForm="ngForm" >
+            <table class="table">
+                <tr>
+                  <td>&nbsp;</td>
+                  <td> <input type="text" name="Name" [(ngModel)]="category.Name"> </td>
+                  <td> <input type="checkbox" name="IsActive" [(ngModel)]="category.IsActive"> </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td> <button type="submit" (click)="Add()">Add</button> </td>
+                  </tr>
+              </table>
+        </form>
+       
+      </div>
+      <!-- /.box-body -->
+      <div class="box-footer">
+        Footer
+      </div>
+      <!-- /.box-footer-->
+    </div>
+    <!-- /.box -->
+
+  </section>
+  <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->

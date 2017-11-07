@@ -1,0 +1,10 @@
+C:\Users\sajjad.hussain\Documents\Visual Studio 2015\Projects\TechWorld\Loging\bin\Debug\Loging.dll
+C:\Users\sajjad.hussain\Documents\Visual Studio 2015\Projects\TechWorld\Loging\bin\Debug\Loging.pdb
+C:\Users\sajjad.hussain\Documents\Visual Studio 2015\Projects\TechWorld\Loging\obj\Debug\Loging.csprojResolveAssemblyReference.cache
+C:\Users\sajjad.hussain\Documents\Visual Studio 2015\Projects\TechWorld\Loging\obj\Debug\Loging.dll
+C:\Users\sajjad.hussain\Documents\Visual Studio 2015\Projects\TechWorld\Loging\obj\Debug\Loging.pdb
+D:\TechWorld\Loging\bin\Debug\Loging.dll
+D:\TechWorld\Loging\bin\Debug\Loging.pdb
+D:\TechWorld\Loging\obj\Debug\Loging.csprojResolveAssemblyReference.cache
+D:\TechWorld\Loging\obj\Debug\Loging.dll
+D:\TechWorld\Loging\obj\Debug\Loging.pdb

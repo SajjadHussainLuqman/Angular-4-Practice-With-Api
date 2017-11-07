@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+
+<div style="height: auto;" class="sidebar-mini wysihtml5-supported skin-blue-light" [class.sidebar-collapse]="LeftMenuCollapse">
+
+<div class="wrapper">
+  <app-master-header (LeftMenuCollapseOutPut)="OnHeaderComponentChange($event)"></app-master-header>
+  <app-master-nav></app-master-nav>
+  <router-outlet></router-outlet>
+  <app-master-footer></app-master-footer>
+</div>
+
+
+<!-- jQuery 3 -->
+<script src="/assets/bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="/assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- SlimScroll -->
+<script src="/assets/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="/assets/bower_components/fastclick/lib/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="/assets/dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="/assets/dist/js/demo.js"></script>
+<!-- DataTables -->
+<script src="/assets/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="/assets/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<!-- SlimScroll -->
+
+<script>
+  $(document).ready(function () {
+    $('.sidebar-menu').tree()
+  })
+</script>
