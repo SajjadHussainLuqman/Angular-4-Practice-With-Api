@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "06 Presentations", "06 Presentations", "{57654E5F-4A54-4159-8FD4-C9F5F44FB5C7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 BusinessLayer", "03 BusinessLayer", "{2F373C7C-E3A9-4EE8-A903-2267F78654BE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 Repositories", "02 Repositories", "{B310F59A-869A-4DC3-8C8C-6BE70AFF937C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 Models", "01 Models", "{A3635466-9787-449B-BB1A-852CD722F01F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 BusinessRules", "04 BusinessRules", "{A2A20FF3-C5E8-4C0D-B0D7-2586D4DFA4B2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05 Helpers", "05 Helpers", "{E44208BA-37B1-4B0C-B6DA-8B788A65F9D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommerceApp.Web", "CommerceApp.Web\CommerceApp.Web.csproj", "{BA649F3B-9399-45CC-8933-86AFC087CB7C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommerceApp.DAL.EFramework", "CommerceApp.DAL.EFramework\CommerceApp.DAL.EFramework.csproj", "{26E35249-0777-4EB1-80D9-15110EC504EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommerceApp.BL.EFramework", "CommerceApp.BL.EFramework\CommerceApp.BL.EFramework.csproj", "{228C8568-9787-4E6A-BD81-186C40750580}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA649F3B-9399-45CC-8933-86AFC087CB7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA649F3B-9399-45CC-8933-86AFC087CB7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA649F3B-9399-45CC-8933-86AFC087CB7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA649F3B-9399-45CC-8933-86AFC087CB7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26E35249-0777-4EB1-80D9-15110EC504EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26E35249-0777-4EB1-80D9-15110EC504EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26E35249-0777-4EB1-80D9-15110EC504EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26E35249-0777-4EB1-80D9-15110EC504EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{228C8568-9787-4E6A-BD81-186C40750580}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{228C8568-9787-4E6A-BD81-186C40750580}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{228C8568-9787-4E6A-BD81-186C40750580}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{228C8568-9787-4E6A-BD81-186C40750580}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BA649F3B-9399-45CC-8933-86AFC087CB7C} = {57654E5F-4A54-4159-8FD4-C9F5F44FB5C7}
+		{26E35249-0777-4EB1-80D9-15110EC504EC} = {B310F59A-869A-4DC3-8C8C-6BE70AFF937C}
+		{228C8568-9787-4E6A-BD81-186C40750580} = {2F373C7C-E3A9-4EE8-A903-2267F78654BE}
+	EndGlobalSection
+EndGlobal

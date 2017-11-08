@@ -1,0 +1,10 @@
+C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\Angular 4 With WebApi Token Login\TechWorld\CommerceApp.DAL.EFramework\bin\Debug\CommerceApp.DAL.EFramework.dll.config
+C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\Angular 4 With WebApi Token Login\TechWorld\CommerceApp.DAL.EFramework\bin\Debug\CommerceApp.DAL.EFramework.dll
+C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\Angular 4 With WebApi Token Login\TechWorld\CommerceApp.DAL.EFramework\bin\Debug\CommerceApp.DAL.EFramework.pdb
+C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\Angular 4 With WebApi Token Login\TechWorld\CommerceApp.DAL.EFramework\bin\Debug\EntityFramework.dll
+C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\Angular 4 With WebApi Token Login\TechWorld\CommerceApp.DAL.EFramework\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\Angular 4 With WebApi Token Login\TechWorld\CommerceApp.DAL.EFramework\bin\Debug\EntityFramework.xml
+C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\Angular 4 With WebApi Token Login\TechWorld\CommerceApp.DAL.EFramework\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\Angular 4 With WebApi Token Login\TechWorld\CommerceApp.DAL.EFramework\obj\Debug\CommerceApp.DAL.EFramework.dll
+C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\Angular 4 With WebApi Token Login\TechWorld\CommerceApp.DAL.EFramework\obj\Debug\CommerceApp.DAL.EFramework.pdb
+C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\Angular 4 With WebApi Token Login\TechWorld\CommerceApp.DAL.EFramework\obj\Debug\CommerceApp.DAL.EFramework.csprojResolveAssemblyReference.cache
