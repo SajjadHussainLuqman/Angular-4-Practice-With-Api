@@ -160,12 +160,19 @@ namespace CommerceBit
                 ConnectedForm form = new ConnectedForm(tokenInfo);
                 form.Show();
                 form.WindowState = FormWindowState.Normal;
+                form.Focus();
+                form.BringToFront();
+                form.Activate();
 
             }
             else
             {
                 this.Show();
                 this.WindowState = FormWindowState.Normal;
+                this.Focus();
+                this.BringToFront();
+                this.Activate();
+
             }
         }
         private void niMessage_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -175,11 +182,18 @@ namespace CommerceBit
                 ConnectedForm form = new ConnectedForm(tokenInfo);
                 form.Show();
                 form.WindowState = FormWindowState.Normal;
+                form.Focus();
+                form.BringToFront();
+                form.Activate();
             }
             else
             {
                 this.Show();
                 this.WindowState = FormWindowState.Normal;
+                this.Focus();
+                this.BringToFront();
+                this.Activate();
+
             }
         }
         private void logInToolStripMenuItem_Click(object sender, EventArgs e)

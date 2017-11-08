@@ -339,7 +339,7 @@
 		<col def="S0">ISDotNetInstallerArgsCommit</col>
 		<col def="S0">ISDotNetInstallerArgsUninstall</col>
 		<col def="S0">ISDotNetInstallerArgsRollback</col>
-		<row><td>CommerceBit.exe</td><td>{44CEF8B4-6015-46CC-8D6C-7D535F1CE3A6}</td><td>INSTALLDIR</td><td>2</td><td/><td>commercebit.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>CommerceBit.exe</td><td>{2C59B726-68CD-4DB5-B1C9-493681037A4C}</td><td>INSTALLDIR</td><td>2</td><td/><td>commercebit.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td>{963D8655-3E6F-4E6F-B9EC-9CEB873FCB40}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>IS_ININSTALL_SHORTCUT</td><td>{0DA82ADB-740E-49FF-87E8-8D055FDA4B40}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 	</table>
@@ -1882,8 +1882,7 @@
 		<col def="S255">ISBuildSourcePath</col>
 		<col def="I4">ISAttributes</col>
 		<col def="S72">ISComponentSubFolder_</col>
-		<row><td>commercebit.exe</td><td>CommerceBit.exe</td><td>COMMER~1.EXE|CommerceBit.exe</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\Sajjad\Documents\GitHub\MyPracticeProject\CommerceBit\CommerceBit\bin\Debug\CommerceBit.exe</td><td>1</td><td/></row>
-		<row><td>commercebit.exe.config</td><td>ISX_DEFAULTCOMPONENT</td><td>COMMER~1.CON|CommerceBit.exe.config</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\Sajjad\Documents\GitHub\MyPracticeProject\CommerceBit\CommerceBit\bin\Debug\CommerceBit.exe.config</td><td>1</td><td/></row>
+		<row><td>commercebit.exe</td><td>CommerceBit.exe</td><td>COMMER~1.EXE|CommerceBit.exe</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\CommerceBit\CommerceBit\bin\Debug\CommerceBit.exe</td><td>1</td><td/></row>
 	</table>
 
 	<table name="FileSFPCatalog">
@@ -2028,7 +2027,7 @@
 		<col def="S0">FTPLocation</col>
 		<col def="S0">HTTPLocation</col>
 		<col def="S0">Miscellaneous</col>
-		<row><td>CommerceBit.exe</td><td/><td/><td>_302CCD58_2D9C_4A53_A0B3_A92B9A900810_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>CommerceBit.exe</td><td/><td/><td>_4C50374E_5BC3_40D0_BD8E_EA4F81BD548D_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_CB9C6265_C494_4F03_A982_055C6DFF22E5_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>IS_ININSTALL_SHORTCUT</td><td/><td/><td>_64B68418_C5D0_4550_A5FD_C7FBF69E3335_FILTER</td><td/><td/><td/><td/></row>
 	</table>
@@ -3433,6 +3432,7 @@
 		<row><td>IDS_SETUPEXE_LAUNCH_COND_E</td><td>1033</td><td>This setup was built with an evaluation version of InstallShield and can only be launched from setup.exe.</td><td>0</td><td/><td>497403491</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME1</td><td>1033</td><td>Launch |Built</td><td>0</td><td/><td>497370979</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME2</td><td>1033</td><td>CommerceBit Suite</td><td>0</td><td/><td>497360100</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME3</td><td>1033</td><td>LAUNCH~1.EXE|Launch CommerceBit.exe</td><td>0</td><td/><td>1168476898</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO</td><td>1033</td><td>From the list of servers below, select the database server you would like to target.</td><td>0</td><td/><td>497403491</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO_DB</td><td>1033</td><td>From the list of catalog names below, select the database catalog you would like to target.</td><td>0</td><td/><td>497403491</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO_TEMPLATE</td><td>1033</td><td>[IS_SQLBROWSE_INTRO]</td><td>0</td><td/><td>497403491</td></row>
@@ -3722,10 +3722,12 @@
 		<row><td>IDS__TargetReq_DESC_RAM</td><td>1033</td><td>The amount of RAM is not adequate for running [ProductName].</td><td>0</td><td/><td>497403491</td></row>
 		<row><td>IDS__TargetReq_DESC_RESOLUTION</td><td>1033</td><td>The screen resolution is not adequate for running [ProductName].</td><td>0</td><td/><td>497403491</td></row>
 		<row><td>ID_STRING1</td><td>1033</td><td/><td>0</td><td/><td>497405539</td></row>
-		<row><td>ID_STRING2</td><td>1033</td><td>http://www.CommerceBitSuite.com</td><td>0</td><td/><td>497376932</td></row>
+		<row><td>ID_STRING2</td><td>1033</td><td>http://www.CommerceBitSuite.com</td><td>0</td><td/><td>1168473634</td></row>
 		<row><td>ID_STRING3</td><td>1033</td><td>CommerceBit Suite</td><td>0</td><td/><td>497376932</td></row>
 		<row><td>ID_STRING4</td><td>1033</td><td>Launch |Built</td><td>0</td><td/><td>497387363</td></row>
 		<row><td>ID_STRING5</td><td>1033</td><td>LAUNCH~1.EXE|Launch CommerceBit.exe</td><td>0</td><td/><td>497373476</td></row>
+		<row><td>ID_STRING6</td><td>1033</td><td>LAUNCH~1.EXE|Launch CommerceBit.exe</td><td>0</td><td/><td>1168447042</td></row>
+		<row><td>ID_STRING7</td><td>1033</td><td>LAUNCH~1.EXE|Launch CommerceBit.exe</td><td>0</td><td/><td>1168449090</td></row>
 		<row><td>IIDS_UITEXT_FeatureUninstalled</td><td>1033</td><td>This feature will remain uninstalled.</td><td>0</td><td/><td>497403491</td></row>
 	</table>
 
@@ -3841,8 +3843,10 @@
 		<col def="S255">ISBuildSourcePath</col>
 		<col def="I2">ISIconIndex</col>
 		<row><td>ARPPRODUCTICON.exe</td><td/><td>&lt;VSSolutionFolder&gt;\CommerceBit\Icons\CommerceBit.ico</td><td>0</td></row>
+		<row><td>CommerceBit.exe1_A6D84F5BDF924EF5A42A3B6AACB46BF4.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 		<row><td>CommerceBit.exe1_E82450A867684AD0BD633E16CAC45D60.exe</td><td/><td>&lt;VSSolutionFolder&gt;\CommerceBit\Icons\CommerceBit.ico</td><td>0</td></row>
 		<row><td>CommerceBit.exe_57960873E643495B8E16FA938B8B1A5C.exe</td><td/><td>&lt;VSSolutionFolder&gt;\CommerceBit\Icons\CommerceBit.ico</td><td>0</td></row>
+		<row><td>CommerceBit.exe_813EB11E3AAB40569D867F475D2737C2.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 		<row><td>UNINST_Uninstall_C_0227E3B3E640449286B9C4F503BD785F.exe</td><td/><td>C:\Program Files (x86)\InstallShield\2015LE\Redist\Language Independent\OS Independent\uninstall.ico</td><td>0</td></row>
 	</table>
 
@@ -3921,7 +3925,7 @@
 		<row><td>RegisterUser</td><td/><td>6000</td><td>RegisterUser</td><td/></row>
 		<row><td>RemoveDuplicateFiles</td><td/><td>3400</td><td>RemoveDuplicateFiles</td><td/></row>
 		<row><td>RemoveEnvironmentStrings</td><td/><td>3300</td><td>RemoveEnvironmentStrings</td><td/></row>
-		<row><td>RemoveExistingProducts</td><td/><td>6601</td><td>RemoveExistingProducts</td><td/></row>
+		<row><td>RemoveExistingProducts</td><td/><td>1500</td><td>RemoveExistingProducts</td><td/></row>
 		<row><td>RemoveFiles</td><td/><td>3500</td><td>RemoveFiles</td><td/></row>
 		<row><td>RemoveFolders</td><td/><td>3600</td><td>RemoveFolders</td><td/></row>
 		<row><td>RemoveIniValues</td><td/><td>3100</td><td>RemoveIniValues</td><td/></row>
@@ -4351,9 +4355,9 @@ RABWAEQALQA1AAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGMSG_IIS_ROLLBACKAPPPOOLS</td><td>##IDS_PROGMSG_IIS_ROLLBACKAPPPOOLS##</td><td/></row>
 		<row><td>PROGMSG_IIS_ROLLBACKVROOTS</td><td>##IDS_PROGMSG_IIS_ROLLBACKVROOTS##</td><td/></row>
 		<row><td>PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS</td><td>##IDS_PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS##</td><td/></row>
-		<row><td>ProductCode</td><td>{D10EE557-3B68-4E8B-9A90-6AC140BCC705}</td><td/></row>
+		<row><td>ProductCode</td><td>{0E64FC05-8CE5-4C19-AB18-D3B02B52744F}</td><td/></row>
 		<row><td>ProductName</td><td>CommerceBitSetup</td><td/></row>
-		<row><td>ProductVersion</td><td>1.00.0000</td><td/></row>
+		<row><td>ProductVersion</td><td>1.10.0001</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
 		<row><td>ProgressType2</td><td>installed</td><td/></row>
@@ -4366,10 +4370,10 @@ RABWAEQALQA1AAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>SERIALNUMBER</td><td/><td/></row>
 		<row><td>SERIALNUMVALSUCCESSRETVAL</td><td>1</td><td/></row>
 		<row><td>SHOWLAUNCHPROGRAM</td><td>-1</td><td/></row>
-		<row><td>SecureCustomProperties</td><td>ISFOUNDNEWERPRODUCTVERSION;USERNAME;COMPANYNAME;ISX_SERIALNUM;SUPPORTDIR</td><td/></row>
+		<row><td>SecureCustomProperties</td><td>USERNAME;COMPANYNAME;ISX_SERIALNUM;SUPPORTDIR;ISACTIONPROP2</td><td/></row>
 		<row><td>SelectedSetupType</td><td>##IDS__DisplayName_Typical##</td><td/></row>
 		<row><td>SetupType</td><td>Typical</td><td/></row>
-		<row><td>UpgradeCode</td><td>{2A073086-B720-4F14-9224-6BFD8207398C}</td><td/></row>
+		<row><td>UpgradeCode</td><td>{44E10040-91A0-4757-A687-9B0CC2177F24}</td><td/></row>
 		<row><td>_IsMaintenance</td><td>Change</td><td/></row>
 		<row><td>_IsSetupTypeMin</td><td>Typical</td><td/></row>
 	</table>
@@ -4516,8 +4520,8 @@ RABWAEQALQA1AAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S255">ISComments</col>
 		<col def="S255">ISShortcutName</col>
 		<col def="I4">ISAttributes</col>
-		<row><td>CommerceBit.exe</td><td>commer_1_commercebitsetup</td><td>##IDS_SHORTCUT_DISPLAY_NAME2##</td><td>CommerceBit.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>CommerceBit.exe_57960873E643495B8E16FA938B8B1A5C.exe</td><td>0</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
-		<row><td>CommerceBit.exe1</td><td>DesktopFolder</td><td>##IDS_SHORTCUT_DISPLAY_NAME2##</td><td>CommerceBit.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>CommerceBit.exe1_E82450A867684AD0BD633E16CAC45D60.exe</td><td>0</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>CommerceBit.exe</td><td>commer_1_commercebitsetup</td><td>##IDS_SHORTCUT_DISPLAY_NAME3##</td><td>CommerceBit.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>CommerceBit.exe_813EB11E3AAB40569D867F475D2737C2.exe</td><td>0</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>CommerceBit.exe1</td><td>DesktopFolder</td><td>##IDS_SHORTCUT_DISPLAY_NAME3##</td><td>CommerceBit.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>CommerceBit.exe1_A6D84F5BDF924EF5A42A3B6AACB46BF4.exe</td><td>0</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
 		<row><td>UNINST_Uninstall_CommerceBitSetup</td><td>commer_1_commercebitsetup</td><td>UNINST|Uninstall CommerceBitSetup</td><td>IS_ININSTALL_SHORTCUT</td><td>[SystemFolder]msiexec.exe</td><td>/x {D10EE557-3B68-4E8B-9A90-6AC140BCC705}</td><td/><td/><td>UNINST_Uninstall_C_0227E3B3E640449286B9C4F503BD785F.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
 	</table>
 
@@ -4640,7 +4644,7 @@ RABWAEQALQA1AAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S255">Remove</col>
 		<col def="s72">ActionProperty</col>
 		<col def="S72">ISDisplayName</col>
-		<row><td>{00000000-0000-0000-0000-000000000000}</td><td>***ALL_VERSIONS***</td><td></td><td></td><td>2</td><td/><td>ISFOUNDNEWERPRODUCTVERSION</td><td>ISPreventDowngrade</td></row>
+		<row><td>{6AC1ECDA-923D-4271-A708-88496B798684}</td><td></td><td>1.10.0001</td><td></td><td>768</td><td/><td>ISACTIONPROP2</td><td>NewUpgradeEntry2</td></row>
 	</table>
 
 	<table name="Verb">
