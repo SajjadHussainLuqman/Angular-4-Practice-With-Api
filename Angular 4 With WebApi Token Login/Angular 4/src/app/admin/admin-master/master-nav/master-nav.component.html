@@ -35,14 +35,19 @@
         <li class="treeview" [class.menu-open]="ChartExpand">
           <a (click)="ChartExpand=!ChartExpand">
             <i class="fa fa-pie-chart"></i>
-            <span>Charts</span>
+            <span>WMS</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu"  [style.display]="ChartExpand ? 'block' : 'none'">
-            <li><a [routerLink]="['PurchaseOrderChart']"><i class="fa fa-circle-o"></i> Purchase Order Chart</a></li>
-            <li><a [routerLink]="['SalesOrderChart']"><i class="fa fa-circle-o"></i> Sales Order Chart</a></li>
+            <li><a [routerLink]="['PurchaseOrderChart']"><i class="fa fa-circle-o"></i> Project Management </a></li>
+            <li><a [routerLink]="['SalesOrderChart']"><i class="fa fa-circle-o"></i> Purchasing </a></li>
+            <li><a [routerLink]="['SalesOrderChart']"><i class="fa fa-circle-o"></i> Receiving </a></li>
+            <li><a [routerLink]="['SalesOrderChart']"><i class="fa fa-circle-o"></i> Wip</a></li>
+            <li><a [routerLink]="['SalesOrderChart']"><i class="fa fa-circle-o"></i> Warehouse </a></li>
+            <li><a [routerLink]="['SalesOrderChart']"><i class="fa fa-circle-o"></i> Reporting </a></li>
+            <li><a [routerLink]="['SalesOrderChart']"><i class="fa fa-circle-o"></i> Admin </a></li>
           </ul>
         </li>
         <li class="treeview"  [class.menu-open]="ReportExpand">
