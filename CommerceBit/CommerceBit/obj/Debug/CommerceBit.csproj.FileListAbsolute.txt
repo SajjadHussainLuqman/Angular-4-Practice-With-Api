@@ -51,3 +51,4 @@ C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\CommerceBit\CommerceB
 C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\CommerceBit\CommerceBit\obj\Debug\CommerceBit.application
 C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\CommerceBit\CommerceBit\obj\Debug\CommerceBit.exe
 C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\CommerceBit\CommerceBit\obj\Debug\CommerceBit.pdb
+C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\CommerceBit\CommerceBit\obj\Debug\CommerceBit.csprojResolveAssemblyReference.cache

@@ -22,6 +22,7 @@ namespace CommerceBit
         }
 
         #region Event Handlers
+
         private void CommerceBitForm_Load(object sender, EventArgs e)
         {
 
