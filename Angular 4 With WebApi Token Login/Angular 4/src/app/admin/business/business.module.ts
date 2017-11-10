@@ -8,10 +8,11 @@ import { businessRoutes } from './business.routes';
 import { CategoryComponent } from './category/category.component';
 import { BrandComponent } from './brand/brand.component';
 import { ProductComponent } from './product/product.component';
+import { SalesOrderComponent } from './sales-order/sales-order.component';
 
 @NgModule({
     declarations:[
-     CategoryComponent, BrandComponent, ProductComponent
+     CategoryComponent, BrandComponent, ProductComponent, SalesOrderComponent
     ],
     providers: [
 

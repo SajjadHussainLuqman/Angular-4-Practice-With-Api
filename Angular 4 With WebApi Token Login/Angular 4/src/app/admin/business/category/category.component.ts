@@ -14,7 +14,7 @@ import { AppError, NotFoundError,BadInput } from '../../../utilites/errorHandlin
 export class CategoryComponent implements OnInit {
 
  
-  category: Category;
+    category: Category;
   
     categoryList: Category[];
   

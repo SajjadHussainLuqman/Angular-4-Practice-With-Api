@@ -20,6 +20,9 @@
         <AssociationConnector Association="CommerceAppDBModel.FK_Model_Brand" />
         <AssociationConnector Association="CommerceAppDBModel.FK_Model_Category" />
         <AssociationConnector Association="CommerceAppDBModel.AspNetUserRoles" />
+        <EntityTypeShape EntityType="CommerceAppDBModel.SaleItem" Width="1.5" PointX="9.625" PointY="6.875" />
+        <EntityTypeShape EntityType="CommerceAppDBModel.SaleOrder" Width="1.5" PointX="7.375" PointY="7" />
+        <AssociationConnector Association="CommerceAppDBModel.FK_SaleItem_SaleOrder" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

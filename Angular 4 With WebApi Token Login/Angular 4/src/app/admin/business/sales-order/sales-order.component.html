@@ -1,0 +1,66 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+  <section class="content">
+
+   
+      <div class="box box-info">
+          <div class="box-header with-border">
+            <h3 class="box-title">Sales Order</h3>
+          </div>
+          <!-- /.box-header -->
+          <!-- form start -->
+          <form class="form-horizontal"  #AddSalesOrderForm="ngForm" >
+            <div class="box-body">
+              <div class="form-group">
+                <label class="col-sm-2 control-label" style="
+                font-weight: 500;
+            ">Description</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control"  name="SaleName" [(ngModel)]="_saleOrder.SaleName" placeholder="Description">
+                </div>
+              </div>
+            </div>
+         
+          </form>
+
+          <div class="box-body">
+              <div class="box-header with-border">
+                  <h3 class="box-title" style="
+                  margin-left: 98px;
+                  font-weight: bold;
+              ">Item Name</h3>
+                </div>
+            <table class="table">
+              <tr *ngFor="let c of _saleOrder.SaleItems">
+                <td>{{c.ItemId}}</td>
+                <td>{{c.Name}}</td>
+                <td><button  (click)="Delete(c)" class="btn btn-danger">Delete</button></td>
+              </tr>
+            </table>
+            <form #AddForm="ngForm" >
+                <table class="table">
+                    <tr>
+                      <td>&nbsp;</td>
+                      <td> <input type="text" name="Name" [(ngModel)]="_saleItem.Name" >  <button type="submit" (click)="AddItem()" class="btn btn-success">Add</button> </td>
+                      <td>&nbsp;&nbsp; </td>
+                    </tr>
+                  </table>
+            </form>
+          </div>
+        
+        </div>
+      <!-- /.box-body -->
+      <div class="box-footer">
+         <!-- /.box-body -->
+         <div class="box-footer">
+            <button type="button" class="btn btn-default">Cancel</button>
+            <button type="submit" class="btn btn-info pull-right"  (click)="Add()">Save</button>
+          </div>
+          <!-- /.box-footer -->
+      </div>
+      <!-- /.box-footer-->
+    <!-- /.box -->
+  </section>
+  <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->

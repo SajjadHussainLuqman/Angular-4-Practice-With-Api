@@ -34,5 +34,7 @@ namespace CommerceApp.DAL.EFramework
         public virtual DbSet<Category> Categories { get; set; }
         public virtual DbSet<Model> Models { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public virtual DbSet<SaleItem> SaleItems { get; set; }
+        public virtual DbSet<SaleOrder> SaleOrders { get; set; }
     }
 }

@@ -12,6 +12,7 @@ import { AppComponent } from './app.component';
 import { routes } from './app.routes';
 
 import { CategoryService } from './services/category.service';
+import { SalesOrderService } from './services/saleOrder.service';
 import { DataService } from './services/data.service';
 import { SharedService } from './services/shared.service';
 import { LoginService } from './services/login.service';
@@ -28,6 +29,7 @@ import { AppErrorHandler } from './utilites/errorHandling/app-error-handler';
   ],
   providers: [
     CategoryService,
+    SalesOrderService,
     DataService,
     SharedService,
     AuthGuard , 

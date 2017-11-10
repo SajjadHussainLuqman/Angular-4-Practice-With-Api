@@ -110,5 +110,22 @@
         <ScalarProperty Name="Id" ColumnName="RoleId" />
       </EndProperty>
     </AssociationSetMapping>
+    <EntitySetMapping Name="SaleItems">
+      <EntityTypeMapping TypeName="CommerceAppDBModel.SaleItem">
+        <MappingFragment StoreEntitySet="SaleItem">
+          <ScalarProperty Name="SaleId" ColumnName="SaleId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SaleOrders">
+      <EntityTypeMapping TypeName="CommerceAppDBModel.SaleOrder">
+        <MappingFragment StoreEntitySet="SaleOrder">
+          <ScalarProperty Name="SaleName" ColumnName="SaleName" />
+          <ScalarProperty Name="SaleId" ColumnName="SaleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

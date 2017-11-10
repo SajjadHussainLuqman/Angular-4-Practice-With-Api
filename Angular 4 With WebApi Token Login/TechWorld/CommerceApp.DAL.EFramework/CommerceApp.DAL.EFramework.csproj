@@ -93,6 +93,12 @@
       <DependentUpon>CommerceAppModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SaleItem.cs">
+      <DependentUpon>CommerceAppModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SaleOrder.cs">
+      <DependentUpon>CommerceAppModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="sysdiagram.cs">
       <DependentUpon>CommerceAppModel.tt</DependentUpon>
     </Compile>

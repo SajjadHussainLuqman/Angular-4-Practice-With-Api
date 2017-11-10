@@ -1,0 +1,5 @@
+C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\Angular 4 With WebApi Token Login\TechWorld\CommerceApp.Common\bin\Debug\CommerceApp.Common.dll
+C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\Angular 4 With WebApi Token Login\TechWorld\CommerceApp.Common\bin\Debug\CommerceApp.Common.pdb
+C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\Angular 4 With WebApi Token Login\TechWorld\CommerceApp.Common\obj\Debug\CommerceApp.Common.csprojResolveAssemblyReference.cache
+C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\Angular 4 With WebApi Token Login\TechWorld\CommerceApp.Common\obj\Debug\CommerceApp.Common.dll
+C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\Angular 4 With WebApi Token Login\TechWorld\CommerceApp.Common\obj\Debug\CommerceApp.Common.pdb

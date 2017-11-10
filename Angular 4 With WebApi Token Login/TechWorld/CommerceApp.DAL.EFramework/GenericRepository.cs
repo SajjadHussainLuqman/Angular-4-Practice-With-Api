@@ -25,7 +25,7 @@ namespace CommerceApp.DAL.EFramework
             IQueryable<T> query = _entities.Set<T>();
             return query;
         }
-
+        
         public IQueryable<T> FindBy(System.Linq.Expressions.Expression<Func<T, bool>> predicate)
         {
 

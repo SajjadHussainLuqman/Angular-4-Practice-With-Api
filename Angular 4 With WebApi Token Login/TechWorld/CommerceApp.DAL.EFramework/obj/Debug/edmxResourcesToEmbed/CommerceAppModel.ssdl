@@ -93,6 +93,21 @@
     <Property Name="PictureName" Type="nvarchar" MaxLength="50" />
     <Property Name="IsActive" Type="bit" />
   </EntityType>
+  <EntityType Name="SaleItem">
+    <Key>
+      <PropertyRef Name="ItemId" />
+    </Key>
+    <Property Name="ItemId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="SaleId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SaleOrder">
+    <Key>
+      <PropertyRef Name="SaleId" />
+    </Key>
+    <Property Name="SaleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SaleName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>
       <PropertyRef Name="diagram_id" />
@@ -195,6 +210,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_SaleItem_SaleOrder">
+    <End Role="SaleOrder" Type="Self.SaleOrder" Multiplicity="1" />
+    <End Role="SaleItem" Type="Self.SaleItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SaleOrder">
+        <PropertyRef Name="SaleId" />
+      </Principal>
+      <Dependent Role="SaleItem">
+        <PropertyRef Name="SaleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="CommerceAppDBModelStoreContainer">
     <EntitySet Name="__MigrationHistory" EntityType="Self.__MigrationHistory" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRoles" Schema="dbo" store:Type="Tables" />
@@ -205,6 +232,8 @@
     <EntitySet Name="Brand" EntityType="Self.Brand" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Model" EntityType="Self.Model" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SaleItem" EntityType="Self.SaleItem" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SaleOrder" EntityType="Self.SaleOrder" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_Brand_Category" Association="Self.FK_Brand_Category">
       <End Role="Category" EntitySet="Category" />
@@ -233,6 +262,10 @@
     <AssociationSet Name="FK_Model_Category" Association="Self.FK_Model_Category">
       <End Role="Category" EntitySet="Category" />
       <End Role="Model" EntitySet="Model" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SaleItem_SaleOrder" Association="Self.FK_SaleItem_SaleOrder">
+      <End Role="SaleOrder" EntitySet="SaleOrder" />
+      <End Role="SaleItem" EntitySet="SaleItem" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

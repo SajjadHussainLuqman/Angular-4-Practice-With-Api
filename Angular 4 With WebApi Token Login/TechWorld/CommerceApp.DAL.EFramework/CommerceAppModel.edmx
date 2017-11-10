@@ -98,6 +98,21 @@
           <Property Name="PictureName" Type="nvarchar" MaxLength="50" />
           <Property Name="IsActive" Type="bit" />
         </EntityType>
+        <EntityType Name="SaleItem">
+          <Key>
+            <PropertyRef Name="ItemId" />
+          </Key>
+          <Property Name="ItemId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="SaleId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SaleOrder">
+          <Key>
+            <PropertyRef Name="SaleId" />
+          </Key>
+          <Property Name="SaleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SaleName" Type="nvarchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
             <PropertyRef Name="diagram_id" />
@@ -200,6 +215,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_SaleItem_SaleOrder">
+          <End Role="SaleOrder" Type="Self.SaleOrder" Multiplicity="1" />
+          <End Role="SaleItem" Type="Self.SaleItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SaleOrder">
+              <PropertyRef Name="SaleId" />
+            </Principal>
+            <Dependent Role="SaleItem">
+              <PropertyRef Name="SaleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="CommerceAppDBModelStoreContainer">
           <EntitySet Name="__MigrationHistory" EntityType="Self.__MigrationHistory" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRoles" Schema="dbo" store:Type="Tables" />
@@ -210,6 +237,8 @@
           <EntitySet Name="Brand" EntityType="Self.Brand" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Model" EntityType="Self.Model" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SaleItem" EntityType="Self.SaleItem" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SaleOrder" EntityType="Self.SaleOrder" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_Brand_Category" Association="Self.FK_Brand_Category">
             <End Role="Category" EntitySet="Category" />
@@ -238,6 +267,10 @@
           <AssociationSet Name="FK_Model_Category" Association="Self.FK_Model_Category">
             <End Role="Category" EntitySet="Category" />
             <End Role="Model" EntitySet="Model" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SaleItem_SaleOrder" Association="Self.FK_SaleItem_SaleOrder">
+            <End Role="SaleOrder" EntitySet="SaleOrder" />
+            <End Role="SaleItem" EntitySet="SaleItem" />
           </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -277,6 +310,12 @@
           <AssociationSet Name="AspNetUserRoles" Association="CommerceAppDBModel.AspNetUserRoles">
             <End Role="AspNetRole" EntitySet="AspNetRoles" />
             <End Role="AspNetUser" EntitySet="AspNetUsers" />
+          </AssociationSet>
+          <EntitySet Name="SaleItems" EntityType="CommerceAppDBModel.SaleItem" />
+          <EntitySet Name="SaleOrders" EntityType="CommerceAppDBModel.SaleOrder" />
+          <AssociationSet Name="FK_SaleItem_SaleOrder" Association="CommerceAppDBModel.FK_SaleItem_SaleOrder">
+            <End Role="SaleOrder" EntitySet="SaleOrders" />
+            <End Role="SaleItem" EntitySet="SaleItems" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="C__MigrationHistory">
@@ -454,6 +493,35 @@
           <End Type="CommerceAppDBModel.AspNetRole" Role="AspNetRole" Multiplicity="*" />
           <End Type="CommerceAppDBModel.AspNetUser" Role="AspNetUser" Multiplicity="*" />
         </Association>
+        <EntityType Name="SaleItem">
+          <Key>
+            <PropertyRef Name="ItemId" />
+          </Key>
+          <Property Name="ItemId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SaleId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="SaleOrder" Relationship="CommerceAppDBModel.FK_SaleItem_SaleOrder" FromRole="SaleItem" ToRole="SaleOrder" />
+        </EntityType>
+        <EntityType Name="SaleOrder">
+          <Key>
+            <PropertyRef Name="SaleId" />
+          </Key>
+          <Property Name="SaleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SaleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="SaleItems" Relationship="CommerceAppDBModel.FK_SaleItem_SaleOrder" FromRole="SaleOrder" ToRole="SaleItem" />
+        </EntityType>
+        <Association Name="FK_SaleItem_SaleOrder">
+          <End Type="CommerceAppDBModel.SaleOrder" Role="SaleOrder" Multiplicity="1" />
+          <End Type="CommerceAppDBModel.SaleItem" Role="SaleItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SaleOrder">
+              <PropertyRef Name="SaleId" />
+            </Principal>
+            <Dependent Role="SaleItem">
+              <PropertyRef Name="SaleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -569,6 +637,23 @@
               <ScalarProperty Name="Id" ColumnName="RoleId" />
             </EndProperty>
           </AssociationSetMapping>
+          <EntitySetMapping Name="SaleItems">
+            <EntityTypeMapping TypeName="CommerceAppDBModel.SaleItem">
+              <MappingFragment StoreEntitySet="SaleItem">
+                <ScalarProperty Name="SaleId" ColumnName="SaleId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SaleOrders">
+            <EntityTypeMapping TypeName="CommerceAppDBModel.SaleOrder">
+              <MappingFragment StoreEntitySet="SaleOrder">
+                <ScalarProperty Name="SaleName" ColumnName="SaleName" />
+                <ScalarProperty Name="SaleId" ColumnName="SaleId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

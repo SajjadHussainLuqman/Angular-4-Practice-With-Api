@@ -34,6 +34,12 @@
       <End Role="AspNetRole" EntitySet="AspNetRoles" />
       <End Role="AspNetUser" EntitySet="AspNetUsers" />
     </AssociationSet>
+    <EntitySet Name="SaleItems" EntityType="CommerceAppDBModel.SaleItem" />
+    <EntitySet Name="SaleOrders" EntityType="CommerceAppDBModel.SaleOrder" />
+    <AssociationSet Name="FK_SaleItem_SaleOrder" Association="CommerceAppDBModel.FK_SaleItem_SaleOrder">
+      <End Role="SaleOrder" EntitySet="SaleOrders" />
+      <End Role="SaleItem" EntitySet="SaleItems" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="C__MigrationHistory">
     <Key>
@@ -209,5 +215,34 @@
   <Association Name="AspNetUserRoles">
     <End Type="CommerceAppDBModel.AspNetRole" Role="AspNetRole" Multiplicity="*" />
     <End Type="CommerceAppDBModel.AspNetUser" Role="AspNetUser" Multiplicity="*" />
+  </Association>
+  <EntityType Name="SaleItem">
+    <Key>
+      <PropertyRef Name="ItemId" />
+    </Key>
+    <Property Name="ItemId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SaleId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="SaleOrder" Relationship="CommerceAppDBModel.FK_SaleItem_SaleOrder" FromRole="SaleItem" ToRole="SaleOrder" />
+  </EntityType>
+  <EntityType Name="SaleOrder">
+    <Key>
+      <PropertyRef Name="SaleId" />
+    </Key>
+    <Property Name="SaleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SaleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="SaleItems" Relationship="CommerceAppDBModel.FK_SaleItem_SaleOrder" FromRole="SaleOrder" ToRole="SaleItem" />
+  </EntityType>
+  <Association Name="FK_SaleItem_SaleOrder">
+    <End Type="CommerceAppDBModel.SaleOrder" Role="SaleOrder" Multiplicity="1" />
+    <End Type="CommerceAppDBModel.SaleItem" Role="SaleItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SaleOrder">
+        <PropertyRef Name="SaleId" />
+      </Principal>
+      <Dependent Role="SaleItem">
+        <PropertyRef Name="SaleId" />
+      </Dependent>
+    </ReferentialConstraint>
   </Association>
 </Schema>

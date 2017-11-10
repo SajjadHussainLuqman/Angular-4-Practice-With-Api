@@ -7,7 +7,9 @@ import { Subject } from 'rxjs/Subject';
 @Injectable()
 export class SharedService {
 
+     // readonly ApiUrl: String = 'http://angular4demoapi.azurewebsites.net/api/';
     readonly ApiUrl: String = 'http://localhost/api/';
+    
     readonly domainUrl: String = 'http://localhost/';
 
     ControllerName: String = '';

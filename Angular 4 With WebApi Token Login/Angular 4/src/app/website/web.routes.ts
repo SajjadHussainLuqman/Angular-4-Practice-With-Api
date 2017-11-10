@@ -12,6 +12,7 @@ export const webRoutes:Routes=[
         { path:'', component:WebIndexComponent },
         { path:'ContactUs', component:ContactUsComponent },
     ]},
+    { path:'', redirectTo: '/Login',pathMatch: 'full' },
     { path:'**', component: PageNotFoundComponent }
 
 ];

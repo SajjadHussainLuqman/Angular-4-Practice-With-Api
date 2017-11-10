@@ -41,7 +41,29 @@
             </span>
           </a>
           <ul class="treeview-menu"  [style.display]="ChartExpand ? 'block' : 'none'">
-            <li><a [routerLink]="['PurchaseOrderChart']"><i class="fa fa-circle-o"></i> Project Management </a></li>
+              <li class="treeview" [class.menu-open]="SettingSubExpand">
+                  <a  (click)="SettingSubExpand=!SettingSubExpand"><i class="fa fa-circle-o"></i> Project Management
+                    <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                  </a>
+                  <ul class="treeview-menu" [style.display]="SettingSubExpand ? 'block' : 'none'">
+            
+                      <li class="treeview"  [class.menu-open]="SettingSubThirdExpand">
+                          <a (click)="SettingSubThirdExpand=!SettingSubThirdExpand"><i class="fa fa-circle-o"></i> Project Approval
+                            <span class="pull-right-container">
+                              <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                          </a>
+                          <ul class="treeview-menu"  [style.display]="SettingSubThirdExpand ? 'block' : 'none'">
+                            <li><a href="#"><i class="fa fa-circle-o"></i> Create Project</a></li>
+                            <li><a href="#"><i class="fa fa-circle-o"></i> Approval Workflow</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="#"><i class="fa fa-circle-o"></i>Project Processing</a></li>
+                        <li><a href="#"><i class="fa fa-circle-o"></i>Project Guidelines</a></li>
+                  </ul>
+                </li>
             <li><a [routerLink]="['SalesOrderChart']"><i class="fa fa-circle-o"></i> Purchasing </a></li>
             <li><a [routerLink]="['SalesOrderChart']"><i class="fa fa-circle-o"></i> Receiving </a></li>
             <li><a [routerLink]="['SalesOrderChart']"><i class="fa fa-circle-o"></i> Wip</a></li>
@@ -58,21 +80,72 @@
             </span>
           </a>
           <ul class="treeview-menu"   [style.display]="ReportExpand ? 'block' : 'none'">
-            <li><a href="../tables/simple.html"><i class="fa fa-circle-o"></i> Simple tables</a></li>
-            <li><a href="../tables/data.html"><i class="fa fa-circle-o"></i> Data tables</a></li>
+            <li><a href="../tables/simple.html"><i class="fa fa-circle-o"></i> Purchase Order</a></li>
+            <li><a href="../tables/data.html"><i class="fa fa-circle-o"></i> Grading Guidelines </a></li>
           </ul>
         </li>
-        <li class="treeview"  [class.menu-open]="ItemsExpand">
-          <a  (click)="ItemsExpand=!ItemsExpand">
-            <i class="fa fa-edit"></i> <span>Items</span>
+
+
+        <li class="treeview"  [class.menu-open]="SalesOrderExpand">
+          <a (click)="SalesOrderExpand=!SalesOrderExpand">
+            <i class="fa fa-table"></i> <span>Sales Order</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
-          <ul class="treeview-menu" [style.display]="ItemsExpand ? 'block' : 'none'">
-            <li><a [routerLink]="['Category']"><i class="fa fa-circle-o"></i> Category</a></li>
-            <li><a [routerLink]="['Brand']"><i class="fa fa-circle-o"></i> Brand</a></li>
-            <li><a [routerLink]="['Product']"><i class="fa fa-circle-o"></i> Product</a></li>
+          <ul class="treeview-menu"   [style.display]="SalesOrderExpand ? 'block' : 'none'">
+            <li><a [routerLink]="['SalesOrder']"><i class="fa fa-circle-o"></i> Sales Order</a></li>
+            <li><a href="../tables/data.html"><i class="fa fa-circle-o"></i> Grading Guidelines </a></li>
+          </ul>
+        </li>
+
+      
+        <li class="treeview"  [class.menu-open]="SettingExpand">
+          <a  (click)="SettingExpand=!SettingExpand">
+            <i class="fa fa-share"></i> <span>Setting</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu"  [style.display]="SettingExpand ? 'block' : 'none'">
+            
+              <li class="treeview"  [class.menu-open]="ItemsExpand">
+                  <a  (click)="ItemsExpand=!ItemsExpand">
+                    <i class="fa fa-edit"></i> <span>Administrative Functions</span>
+                    <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                  </a>
+                  <ul class="treeview-menu" [style.display]="ItemsExpand ? 'block' : 'none'">
+                    <li><a [routerLink]="['Category']"><i class="fa fa-circle-o"></i> Carton</a></li>
+                    <li><a [routerLink]="['Brand']"><i class="fa fa-circle-o"></i> Pallet</a></li>
+                    <li><a [routerLink]="['Product']"><i class="fa fa-circle-o"></i> Trailer</a></li>
+                    <li><a [routerLink]="['Product']"><i class="fa fa-circle-o"></i> Roles</a></li>
+                  </ul>
+                </li>
+
+            <li class="treeview" [class.menu-open]="SettingSubExpand">
+              <a  (click)="SettingSubExpand=!SettingSubExpand"><i class="fa fa-circle-o"></i> Users
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu" [style.display]="SettingSubExpand ? 'block' : 'none'">
+
+                  <li class="treeview"  [class.menu-open]="SettingSubThirdExpand">
+                      <a (click)="SettingSubThirdExpand=!SettingSubThirdExpand"><i class="fa fa-circle-o"></i> Roles
+                        <span class="pull-right-container">
+                          <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                      </a>
+                      <ul class="treeview-menu"  [style.display]="SettingSubThirdExpand ? 'block' : 'none'">
+                        <li><a href="#"><i class="fa fa-circle-o"></i> Menu</a></li>
+                        <li><a href="#"><i class="fa fa-circle-o"></i> Pages</a></li>
+                        <li><a href="#"><i class="fa fa-circle-o"></i> Controls</a></li>
+                      </ul>
+                    </li>
+              </ul>
+            </li>
           </ul>
         </li>
       

@@ -49,10 +49,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BrandRepository.cs" />
-    <Compile Include="CategoryRepository.cs" />
-    <Compile Include="IBrandRepository.cs" />
-    <Compile Include="ICategoryRepository.cs" />
+    <Compile Include="SalesOrder\Classes\SaleItemRepository.cs" />
+    <Compile Include="SalesOrder\Classes\SalesOrderRepository.cs" />
+    <Compile Include="SalesOrder\Interfaces\ISaleItemRepository.cs" />
+    <Compile Include="SalesOrder\Interfaces\ISalesOrderRepository.cs" />
+    <Compile Include="SetupTable\Classes\BrandRepository.cs" />
+    <Compile Include="SetupTable\Classes\CategoryRepository.cs" />
+    <Compile Include="SetupTable\Interfaces\IBrandRepository.cs" />
+    <Compile Include="SetupTable\Interfaces\ICategoryRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -65,6 +69,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
