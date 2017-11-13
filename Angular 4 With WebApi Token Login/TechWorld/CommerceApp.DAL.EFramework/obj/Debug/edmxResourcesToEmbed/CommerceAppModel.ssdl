@@ -69,6 +69,7 @@
     <Property Name="CategoryId" Type="int" Nullable="false" />
     <Property Name="Name" Type="nvarchar" MaxLength="50" />
     <Property Name="IsActive" Type="bit" />
+    <Property Name="SortOrder" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Category">
     <Key>
@@ -77,6 +78,7 @@
     <Property Name="CategoryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="nvarchar" MaxLength="50" />
     <Property Name="IsActive" Type="bit" />
+    <Property Name="SortOrder" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Model">
     <Key>
@@ -86,12 +88,9 @@
     <Property Name="CategoryId" Type="int" Nullable="false" />
     <Property Name="BrandId" Type="int" Nullable="false" />
     <Property Name="Name" Type="nvarchar" MaxLength="50" />
-    <Property Name="Series" Type="nvarchar" MaxLength="50" />
-    <Property Name="ActualPrice" Type="numeric" Precision="12" Scale="2" />
-    <Property Name="SalePrice" Type="numeric" Precision="12" Scale="2" />
-    <Property Name="ReleaseDate" Type="datetime" />
-    <Property Name="PictureName" Type="nvarchar" MaxLength="50" />
+    <Property Name="PictureName" Type="nvarchar" MaxLength="250" />
     <Property Name="IsActive" Type="bit" />
+    <Property Name="SortOrder" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="SaleItem">
     <Key>

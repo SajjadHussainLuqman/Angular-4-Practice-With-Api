@@ -56,41 +56,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Brands">
-      <EntityTypeMapping TypeName="CommerceAppDBModel.Brand">
-        <MappingFragment StoreEntitySet="Brand">
-          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
-          <ScalarProperty Name="BrandId" ColumnName="BrandId" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Categories">
-      <EntityTypeMapping TypeName="CommerceAppDBModel.Category">
-        <MappingFragment StoreEntitySet="Category">
-          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Models">
-      <EntityTypeMapping TypeName="CommerceAppDBModel.Model">
-        <MappingFragment StoreEntitySet="Model">
-          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
-          <ScalarProperty Name="PictureName" ColumnName="PictureName" />
-          <ScalarProperty Name="ReleaseDate" ColumnName="ReleaseDate" />
-          <ScalarProperty Name="SalePrice" ColumnName="SalePrice" />
-          <ScalarProperty Name="ActualPrice" ColumnName="ActualPrice" />
-          <ScalarProperty Name="Series" ColumnName="Series" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="BrandId" ColumnName="BrandId" />
-          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
-          <ScalarProperty Name="ModelId" ColumnName="ModelId" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="sysdiagrams">
       <EntityTypeMapping TypeName="CommerceAppDBModel.sysdiagram">
         <MappingFragment StoreEntitySet="sysdiagrams">
@@ -124,6 +89,40 @@
         <MappingFragment StoreEntitySet="SaleOrder">
           <ScalarProperty Name="SaleName" ColumnName="SaleName" />
           <ScalarProperty Name="SaleId" ColumnName="SaleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Brands">
+      <EntityTypeMapping TypeName="CommerceAppDBModel.Brand">
+        <MappingFragment StoreEntitySet="Brand">
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="BrandId" ColumnName="BrandId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="CommerceAppDBModel.Category">
+        <MappingFragment StoreEntitySet="Category">
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Models">
+      <EntityTypeMapping TypeName="CommerceAppDBModel.Model">
+        <MappingFragment StoreEntitySet="Model">
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="PictureName" ColumnName="PictureName" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="BrandId" ColumnName="BrandId" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="ModelId" ColumnName="ModelId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

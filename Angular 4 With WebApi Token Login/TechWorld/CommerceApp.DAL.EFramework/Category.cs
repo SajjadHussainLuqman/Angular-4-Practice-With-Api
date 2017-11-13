@@ -24,6 +24,7 @@ namespace CommerceApp.DAL.EFramework
         public int CategoryId { get; set; }
         public string Name { get; set; }
         public Nullable<bool> IsActive { get; set; }
+        public int SortOrder { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Brand> Brands { get; set; }

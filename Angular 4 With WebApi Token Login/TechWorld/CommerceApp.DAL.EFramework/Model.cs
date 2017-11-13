@@ -18,12 +18,9 @@ namespace CommerceApp.DAL.EFramework
         public int CategoryId { get; set; }
         public int BrandId { get; set; }
         public string Name { get; set; }
-        public string Series { get; set; }
-        public Nullable<decimal> ActualPrice { get; set; }
-        public Nullable<decimal> SalePrice { get; set; }
-        public Nullable<System.DateTime> ReleaseDate { get; set; }
         public string PictureName { get; set; }
         public Nullable<bool> IsActive { get; set; }
+        public int SortOrder { get; set; }
     
         public virtual Brand Brand { get; set; }
         public virtual Category Category { get; set; }

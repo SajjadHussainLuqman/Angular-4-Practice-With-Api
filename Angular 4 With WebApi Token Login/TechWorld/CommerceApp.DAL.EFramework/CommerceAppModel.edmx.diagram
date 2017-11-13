@@ -10,19 +10,19 @@
         <EntityTypeShape EntityType="CommerceAppDBModel.AspNetUserClaim" Width="1.5" PointX="5.25" PointY="3.625" />
         <EntityTypeShape EntityType="CommerceAppDBModel.AspNetUserLogin" Width="1.5" PointX="5.25" PointY="1" />
         <EntityTypeShape EntityType="CommerceAppDBModel.AspNetUser" Width="1.5" PointX="3" PointY="1.375" />
-        <EntityTypeShape EntityType="CommerceAppDBModel.Brand" Width="1.5" PointX="3" PointY="7.625" />
-        <EntityTypeShape EntityType="CommerceAppDBModel.Category" Width="1.5" PointX="0.75" PointY="7.625" />
-        <EntityTypeShape EntityType="CommerceAppDBModel.Model" Width="1.5" PointX="5.25" PointY="7" />
         <EntityTypeShape EntityType="CommerceAppDBModel.sysdiagram" Width="1.5" PointX="7.75" PointY="3.75" />
         <AssociationConnector Association="CommerceAppDBModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" />
         <AssociationConnector Association="CommerceAppDBModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" />
-        <AssociationConnector Association="CommerceAppDBModel.FK_Brand_Category" />
-        <AssociationConnector Association="CommerceAppDBModel.FK_Model_Brand" />
-        <AssociationConnector Association="CommerceAppDBModel.FK_Model_Category" />
         <AssociationConnector Association="CommerceAppDBModel.AspNetUserRoles" />
         <EntityTypeShape EntityType="CommerceAppDBModel.SaleItem" Width="1.5" PointX="9.625" PointY="6.875" />
         <EntityTypeShape EntityType="CommerceAppDBModel.SaleOrder" Width="1.5" PointX="7.375" PointY="7" />
         <AssociationConnector Association="CommerceAppDBModel.FK_SaleItem_SaleOrder" />
+        <EntityTypeShape EntityType="CommerceAppDBModel.Brand" Width="1.5" PointX="3" PointY="10.125" />
+        <EntityTypeShape EntityType="CommerceAppDBModel.Category" Width="1.5" PointX="0.75" PointY="10.25" />
+        <EntityTypeShape EntityType="CommerceAppDBModel.Model" Width="1.5" PointX="5.25" PointY="10" />
+        <AssociationConnector Association="CommerceAppDBModel.FK_Brand_Category" />
+        <AssociationConnector Association="CommerceAppDBModel.FK_Model_Brand" />
+        <AssociationConnector Association="CommerceAppDBModel.FK_Model_Category" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

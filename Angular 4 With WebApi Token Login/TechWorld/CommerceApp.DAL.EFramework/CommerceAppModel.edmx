@@ -74,6 +74,7 @@
           <Property Name="CategoryId" Type="int" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="50" />
           <Property Name="IsActive" Type="bit" />
+          <Property Name="SortOrder" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Category">
           <Key>
@@ -82,6 +83,7 @@
           <Property Name="CategoryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="50" />
           <Property Name="IsActive" Type="bit" />
+          <Property Name="SortOrder" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Model">
           <Key>
@@ -91,12 +93,9 @@
           <Property Name="CategoryId" Type="int" Nullable="false" />
           <Property Name="BrandId" Type="int" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="50" />
-          <Property Name="Series" Type="nvarchar" MaxLength="50" />
-          <Property Name="ActualPrice" Type="numeric" Precision="12" Scale="2" />
-          <Property Name="SalePrice" Type="numeric" Precision="12" Scale="2" />
-          <Property Name="ReleaseDate" Type="datetime" />
-          <Property Name="PictureName" Type="nvarchar" MaxLength="50" />
+          <Property Name="PictureName" Type="nvarchar" MaxLength="250" />
           <Property Name="IsActive" Type="bit" />
+          <Property Name="SortOrder" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="SaleItem">
           <Key>
@@ -283,9 +282,6 @@
           <EntitySet Name="AspNetUserClaims" EntityType="CommerceAppDBModel.AspNetUserClaim" />
           <EntitySet Name="AspNetUserLogins" EntityType="CommerceAppDBModel.AspNetUserLogin" />
           <EntitySet Name="AspNetUsers" EntityType="CommerceAppDBModel.AspNetUser" />
-          <EntitySet Name="Brands" EntityType="CommerceAppDBModel.Brand" />
-          <EntitySet Name="Categories" EntityType="CommerceAppDBModel.Category" />
-          <EntitySet Name="Models" EntityType="CommerceAppDBModel.Model" />
           <EntitySet Name="sysdiagrams" EntityType="CommerceAppDBModel.sysdiagram" />
           <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="CommerceAppDBModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
             <End Role="AspNetUser" EntitySet="AspNetUsers" />
@@ -295,6 +291,19 @@
             <End Role="AspNetUser" EntitySet="AspNetUsers" />
             <End Role="AspNetUserLogin" EntitySet="AspNetUserLogins" />
           </AssociationSet>
+          <AssociationSet Name="AspNetUserRoles" Association="CommerceAppDBModel.AspNetUserRoles">
+            <End Role="AspNetRole" EntitySet="AspNetRoles" />
+            <End Role="AspNetUser" EntitySet="AspNetUsers" />
+          </AssociationSet>
+          <EntitySet Name="SaleItems" EntityType="CommerceAppDBModel.SaleItem" />
+          <EntitySet Name="SaleOrders" EntityType="CommerceAppDBModel.SaleOrder" />
+          <AssociationSet Name="FK_SaleItem_SaleOrder" Association="CommerceAppDBModel.FK_SaleItem_SaleOrder">
+            <End Role="SaleOrder" EntitySet="SaleOrders" />
+            <End Role="SaleItem" EntitySet="SaleItems" />
+          </AssociationSet>
+          <EntitySet Name="Brands" EntityType="CommerceAppDBModel.Brand" />
+          <EntitySet Name="Categories" EntityType="CommerceAppDBModel.Category" />
+          <EntitySet Name="Models" EntityType="CommerceAppDBModel.Model" />
           <AssociationSet Name="FK_Brand_Category" Association="CommerceAppDBModel.FK_Brand_Category">
             <End Role="Category" EntitySet="Categories" />
             <End Role="Brand" EntitySet="Brands" />
@@ -306,16 +315,6 @@
           <AssociationSet Name="FK_Model_Category" Association="CommerceAppDBModel.FK_Model_Category">
             <End Role="Category" EntitySet="Categories" />
             <End Role="Model" EntitySet="Models" />
-          </AssociationSet>
-          <AssociationSet Name="AspNetUserRoles" Association="CommerceAppDBModel.AspNetUserRoles">
-            <End Role="AspNetRole" EntitySet="AspNetRoles" />
-            <End Role="AspNetUser" EntitySet="AspNetUsers" />
-          </AssociationSet>
-          <EntitySet Name="SaleItems" EntityType="CommerceAppDBModel.SaleItem" />
-          <EntitySet Name="SaleOrders" EntityType="CommerceAppDBModel.SaleOrder" />
-          <AssociationSet Name="FK_SaleItem_SaleOrder" Association="CommerceAppDBModel.FK_SaleItem_SaleOrder">
-            <End Role="SaleOrder" EntitySet="SaleOrders" />
-            <End Role="SaleItem" EntitySet="SaleItems" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="C__MigrationHistory">
@@ -377,44 +376,6 @@
           <NavigationProperty Name="AspNetUserLogins" Relationship="CommerceAppDBModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUser" ToRole="AspNetUserLogin" />
           <NavigationProperty Name="AspNetRoles" Relationship="CommerceAppDBModel.AspNetUserRoles" FromRole="AspNetUser" ToRole="AspNetRole" />
         </EntityType>
-        <EntityType Name="Brand">
-          <Key>
-            <PropertyRef Name="BrandId" />
-          </Key>
-          <Property Name="BrandId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="CategoryId" Type="Int32" Nullable="false" />
-          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="IsActive" Type="Boolean" />
-          <NavigationProperty Name="Category" Relationship="CommerceAppDBModel.FK_Brand_Category" FromRole="Brand" ToRole="Category" />
-          <NavigationProperty Name="Models" Relationship="CommerceAppDBModel.FK_Model_Brand" FromRole="Brand" ToRole="Model" />
-        </EntityType>
-        <EntityType Name="Category">
-          <Key>
-            <PropertyRef Name="CategoryId" />
-          </Key>
-          <Property Name="CategoryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="IsActive" Type="Boolean" />
-          <NavigationProperty Name="Brands" Relationship="CommerceAppDBModel.FK_Brand_Category" FromRole="Category" ToRole="Brand" />
-          <NavigationProperty Name="Models" Relationship="CommerceAppDBModel.FK_Model_Category" FromRole="Category" ToRole="Model" />
-        </EntityType>
-        <EntityType Name="Model">
-          <Key>
-            <PropertyRef Name="ModelId" />
-          </Key>
-          <Property Name="ModelId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="CategoryId" Type="Int32" Nullable="false" />
-          <Property Name="BrandId" Type="Int32" Nullable="false" />
-          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Series" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="ActualPrice" Type="Decimal" Precision="12" Scale="2" />
-          <Property Name="SalePrice" Type="Decimal" Precision="12" Scale="2" />
-          <Property Name="ReleaseDate" Type="DateTime" Precision="3" />
-          <Property Name="PictureName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="IsActive" Type="Boolean" />
-          <NavigationProperty Name="Brand" Relationship="CommerceAppDBModel.FK_Model_Brand" FromRole="Model" ToRole="Brand" />
-          <NavigationProperty Name="Category" Relationship="CommerceAppDBModel.FK_Model_Category" FromRole="Model" ToRole="Category" />
-        </EntityType>
         <EntityType Name="sysdiagram">
           <Key>
             <PropertyRef Name="diagram_id" />
@@ -453,6 +414,76 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="AspNetUserRoles">
+          <End Type="CommerceAppDBModel.AspNetRole" Role="AspNetRole" Multiplicity="*" />
+          <End Type="CommerceAppDBModel.AspNetUser" Role="AspNetUser" Multiplicity="*" />
+        </Association>
+        <EntityType Name="SaleItem">
+          <Key>
+            <PropertyRef Name="ItemId" />
+          </Key>
+          <Property Name="ItemId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SaleId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="SaleOrder" Relationship="CommerceAppDBModel.FK_SaleItem_SaleOrder" FromRole="SaleItem" ToRole="SaleOrder" />
+        </EntityType>
+        <EntityType Name="SaleOrder">
+          <Key>
+            <PropertyRef Name="SaleId" />
+          </Key>
+          <Property Name="SaleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SaleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="SaleItems" Relationship="CommerceAppDBModel.FK_SaleItem_SaleOrder" FromRole="SaleOrder" ToRole="SaleItem" />
+        </EntityType>
+        <Association Name="FK_SaleItem_SaleOrder">
+          <End Type="CommerceAppDBModel.SaleOrder" Role="SaleOrder" Multiplicity="1" />
+          <End Type="CommerceAppDBModel.SaleItem" Role="SaleItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SaleOrder">
+              <PropertyRef Name="SaleId" />
+            </Principal>
+            <Dependent Role="SaleItem">
+              <PropertyRef Name="SaleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Brand">
+          <Key>
+            <PropertyRef Name="BrandId" />
+          </Key>
+          <Property Name="BrandId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CategoryId" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="SortOrder" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Category" Relationship="CommerceAppDBModel.FK_Brand_Category" FromRole="Brand" ToRole="Category" />
+          <NavigationProperty Name="Models" Relationship="CommerceAppDBModel.FK_Model_Brand" FromRole="Brand" ToRole="Model" />
+        </EntityType>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="CategoryId" />
+          </Key>
+          <Property Name="CategoryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="SortOrder" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Brands" Relationship="CommerceAppDBModel.FK_Brand_Category" FromRole="Category" ToRole="Brand" />
+          <NavigationProperty Name="Models" Relationship="CommerceAppDBModel.FK_Model_Category" FromRole="Category" ToRole="Model" />
+        </EntityType>
+        <EntityType Name="Model">
+          <Key>
+            <PropertyRef Name="ModelId" />
+          </Key>
+          <Property Name="ModelId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CategoryId" Type="Int32" Nullable="false" />
+          <Property Name="BrandId" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PictureName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="SortOrder" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Brand" Relationship="CommerceAppDBModel.FK_Model_Brand" FromRole="Model" ToRole="Brand" />
+          <NavigationProperty Name="Category" Relationship="CommerceAppDBModel.FK_Model_Category" FromRole="Model" ToRole="Category" />
+        </EntityType>
         <Association Name="FK_Brand_Category">
           <End Type="CommerceAppDBModel.Category" Role="Category" Multiplicity="1" />
           <End Type="CommerceAppDBModel.Brand" Role="Brand" Multiplicity="*" />
@@ -486,39 +517,6 @@
             </Principal>
             <Dependent Role="Model">
               <PropertyRef Name="CategoryId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="AspNetUserRoles">
-          <End Type="CommerceAppDBModel.AspNetRole" Role="AspNetRole" Multiplicity="*" />
-          <End Type="CommerceAppDBModel.AspNetUser" Role="AspNetUser" Multiplicity="*" />
-        </Association>
-        <EntityType Name="SaleItem">
-          <Key>
-            <PropertyRef Name="ItemId" />
-          </Key>
-          <Property Name="ItemId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="SaleId" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="SaleOrder" Relationship="CommerceAppDBModel.FK_SaleItem_SaleOrder" FromRole="SaleItem" ToRole="SaleOrder" />
-        </EntityType>
-        <EntityType Name="SaleOrder">
-          <Key>
-            <PropertyRef Name="SaleId" />
-          </Key>
-          <Property Name="SaleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="SaleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="SaleItems" Relationship="CommerceAppDBModel.FK_SaleItem_SaleOrder" FromRole="SaleOrder" ToRole="SaleItem" />
-        </EntityType>
-        <Association Name="FK_SaleItem_SaleOrder">
-          <End Type="CommerceAppDBModel.SaleOrder" Role="SaleOrder" Multiplicity="1" />
-          <End Type="CommerceAppDBModel.SaleItem" Role="SaleItem" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="SaleOrder">
-              <PropertyRef Name="SaleId" />
-            </Principal>
-            <Dependent Role="SaleItem">
-              <PropertyRef Name="SaleId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -583,41 +581,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Brands">
-            <EntityTypeMapping TypeName="CommerceAppDBModel.Brand">
-              <MappingFragment StoreEntitySet="Brand">
-                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
-                <ScalarProperty Name="BrandId" ColumnName="BrandId" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Categories">
-            <EntityTypeMapping TypeName="CommerceAppDBModel.Category">
-              <MappingFragment StoreEntitySet="Category">
-                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Models">
-            <EntityTypeMapping TypeName="CommerceAppDBModel.Model">
-              <MappingFragment StoreEntitySet="Model">
-                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
-                <ScalarProperty Name="PictureName" ColumnName="PictureName" />
-                <ScalarProperty Name="ReleaseDate" ColumnName="ReleaseDate" />
-                <ScalarProperty Name="SalePrice" ColumnName="SalePrice" />
-                <ScalarProperty Name="ActualPrice" ColumnName="ActualPrice" />
-                <ScalarProperty Name="Series" ColumnName="Series" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="BrandId" ColumnName="BrandId" />
-                <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
-                <ScalarProperty Name="ModelId" ColumnName="ModelId" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="sysdiagrams">
             <EntityTypeMapping TypeName="CommerceAppDBModel.sysdiagram">
               <MappingFragment StoreEntitySet="sysdiagrams">
@@ -651,6 +614,40 @@
               <MappingFragment StoreEntitySet="SaleOrder">
                 <ScalarProperty Name="SaleName" ColumnName="SaleName" />
                 <ScalarProperty Name="SaleId" ColumnName="SaleId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Brands">
+            <EntityTypeMapping TypeName="CommerceAppDBModel.Brand">
+              <MappingFragment StoreEntitySet="Brand">
+                <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+                <ScalarProperty Name="BrandId" ColumnName="BrandId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Categories">
+            <EntityTypeMapping TypeName="CommerceAppDBModel.Category">
+              <MappingFragment StoreEntitySet="Category">
+                <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Models">
+            <EntityTypeMapping TypeName="CommerceAppDBModel.Model">
+              <MappingFragment StoreEntitySet="Model">
+                <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="PictureName" ColumnName="PictureName" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="BrandId" ColumnName="BrandId" />
+                <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+                <ScalarProperty Name="ModelId" ColumnName="ModelId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
