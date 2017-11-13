@@ -3,6 +3,8 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { RouterModule,Routes } from '@angular/router';
 import { FormsModule,ReactiveFormsModule  } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+
 
 import { DashboardModule } from './admin/index';
 import { WebModule } from './website/index';
@@ -25,7 +27,8 @@ import { AppErrorHandler } from './utilites/errorHandling/app-error-handler';
     AppComponent
   ],
   imports: [
-    BrowserModule,HttpModule,DashboardModule, WebModule,FormsModule,ReactiveFormsModule, RouterModule.forRoot(routes)
+    BrowserModule,HttpModule,DashboardModule, WebModule,FormsModule,ReactiveFormsModule,
+    RouterModule.forRoot(routes, {useHash: true})
   ],
   providers: [
     CategoryService,
@@ -34,7 +37,8 @@ import { AppErrorHandler } from './utilites/errorHandling/app-error-handler';
     SharedService,
     AuthGuard , 
     LoginService ,
-    {provide: ErrorHandler, useClass: AppErrorHandler}],
+    {provide: ErrorHandler, useClass: AppErrorHandler},
+    {provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

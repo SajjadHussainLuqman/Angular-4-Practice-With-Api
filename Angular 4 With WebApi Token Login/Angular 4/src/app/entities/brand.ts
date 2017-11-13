@@ -1,4 +1,5 @@
-export class Category {
+export class Brand {
+    BrandId: Number;
     CategoryId: Number;
     Name: String;
     IsActive: Boolean;

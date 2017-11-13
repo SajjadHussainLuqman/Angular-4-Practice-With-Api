@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SalesOrderService } from '../../../services/saleOrder.service';
-import { SaleOrder } from '../../../entities/saleOrder';
-import { SaleItem } from '../../../entities/saleItem';
+import { SaleOrder , SaleItem } from '../../../entities/index';
 import { NgForm } from '@angular/forms';
 import { Response } from '@angular/http';
 

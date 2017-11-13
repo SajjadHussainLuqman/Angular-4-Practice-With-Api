@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CategoryService } from '../../../services/category.service';
-import { Category } from '../../../entities/category';
+import { Category } from '../../../entities/index';
 import { NgForm } from '@angular/forms';
 import { Response } from '@angular/http';
 
