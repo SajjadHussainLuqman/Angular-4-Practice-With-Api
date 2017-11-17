@@ -6,5 +6,4 @@ export class Brand {
     Name: String;
     IsActive: Boolean;
     SortOrder: Number;
-    Category: Category;
 }
