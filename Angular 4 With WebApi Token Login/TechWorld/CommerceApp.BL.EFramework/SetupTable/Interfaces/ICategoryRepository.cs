@@ -4,6 +4,6 @@ namespace CommerceApp.BL.EFramework
 {
     public interface ICategoryRepository : IGenericRepository<Category>
     {
-        Category GetSingle(int CategoryId);
+        Category GetSingle(int Id);
     }
 }

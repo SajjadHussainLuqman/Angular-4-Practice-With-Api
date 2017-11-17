@@ -17,7 +17,7 @@ namespace CommerceApp.DAL.EFramework
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Brand()
         {
-            this.Models = new HashSet<Model>();
+            this.Products = new HashSet<Product>();
         }
     
         public int BrandId { get; set; }
@@ -28,6 +28,6 @@ namespace CommerceApp.DAL.EFramework
     
         public virtual Category Category { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Model> Models { get; set; }
+        public virtual ICollection<Product> Products { get; set; }
     }
 }

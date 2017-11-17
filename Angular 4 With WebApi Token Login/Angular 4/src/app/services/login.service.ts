@@ -19,34 +19,34 @@ export class LoginService
 
     Login(body: any)
     {
-        return this._http.post(this._shared.domainUrl+'Token', body) 
+        return this._http.post(this._shared.BaseUrl+'Token', body) 
                     .map(this.extractData)
                     .catch(this.handleError);
     }
 
     RegisterUser(_Id:Number)
     {
-        return this._http.get(this._shared.ApiUrl.toString()+'/'+_Id)
+        return this._http.get(this._shared.BaseUrl.toString()+'/'+_Id)
                             .map(this.extractData)
                             .catch(this.handleError);
     }
 
     PasswordRecover(_resource: any) {
-        return this._http.post(this._shared.ApiUrl.toString(), _resource, this._shared.getContentTypeJsonReqOpt())
+        return this._http.post(this._shared.BaseUrl.toString(), _resource, this._shared.getContentTypeJsonReqOpt())
                    .map(this.extractData)
                    .catch(this.handleError);
     }
 
     UpdateUser(_resource: any) {
         
-        return this._http.put(this._shared.ApiUrl.toString(), _resource, this._shared.getContentTypeJsonReqOpt())
+        return this._http.put(this._shared.BaseUrl.toString(), _resource, this._shared.getContentTypeJsonReqOpt())
                     .map(this.extractData)
                     .catch(this.handleError);
     }
 
     DeleteUser(_Id: Number) {
   
-        return this._http.delete(this._shared.ApiUrl.toString() + '/'+_Id)
+        return this._http.delete(this._shared.BaseUrl.toString() + '/'+_Id)
                     .map(this.extractData)
                     .catch(this.handleError);
     }

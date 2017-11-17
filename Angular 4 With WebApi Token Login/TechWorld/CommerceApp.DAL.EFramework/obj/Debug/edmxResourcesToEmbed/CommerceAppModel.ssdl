@@ -80,11 +80,11 @@
     <Property Name="IsActive" Type="bit" />
     <Property Name="SortOrder" Type="int" Nullable="false" />
   </EntityType>
-  <EntityType Name="Model">
+  <EntityType Name="Product">
     <Key>
-      <PropertyRef Name="ModelId" />
+      <PropertyRef Name="ProductId" />
     </Key>
-    <Property Name="ModelId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="CategoryId" Type="int" Nullable="false" />
     <Property Name="BrandId" Type="int" Nullable="false" />
     <Property Name="Name" Type="nvarchar" MaxLength="50" />
@@ -187,24 +187,24 @@
   </Association>
   <Association Name="FK_Model_Brand">
     <End Role="Brand" Type="Self.Brand" Multiplicity="1" />
-    <End Role="Model" Type="Self.Model" Multiplicity="*" />
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Brand">
         <PropertyRef Name="BrandId" />
       </Principal>
-      <Dependent Role="Model">
+      <Dependent Role="Product">
         <PropertyRef Name="BrandId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Model_Category">
     <End Role="Category" Type="Self.Category" Multiplicity="1" />
-    <End Role="Model" Type="Self.Model" Multiplicity="*" />
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Category">
         <PropertyRef Name="CategoryId" />
       </Principal>
-      <Dependent Role="Model">
+      <Dependent Role="Product">
         <PropertyRef Name="CategoryId" />
       </Dependent>
     </ReferentialConstraint>
@@ -230,7 +230,7 @@
     <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Brand" EntityType="Self.Brand" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Model" EntityType="Self.Model" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SaleItem" EntityType="Self.SaleItem" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SaleOrder" EntityType="Self.SaleOrder" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
@@ -256,11 +256,11 @@
     </AssociationSet>
     <AssociationSet Name="FK_Model_Brand" Association="Self.FK_Model_Brand">
       <End Role="Brand" EntitySet="Brand" />
-      <End Role="Model" EntitySet="Model" />
+      <End Role="Product" EntitySet="Product" />
     </AssociationSet>
     <AssociationSet Name="FK_Model_Category" Association="Self.FK_Model_Category">
       <End Role="Category" EntitySet="Category" />
-      <End Role="Model" EntitySet="Model" />
+      <End Role="Product" EntitySet="Product" />
     </AssociationSet>
     <AssociationSet Name="FK_SaleItem_SaleOrder" Association="Self.FK_SaleItem_SaleOrder">
       <End Role="SaleOrder" EntitySet="SaleOrder" />

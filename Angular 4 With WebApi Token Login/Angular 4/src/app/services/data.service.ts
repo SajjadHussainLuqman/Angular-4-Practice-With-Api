@@ -34,6 +34,7 @@ export class DataService
     }
 
     Add(_resource: any) {
+        debugger;
         return this._http.post(this.FullUrl.toString(), _resource, this._shared.getContentTypeJsonReqOpt())
                    .map(this.extractData)
                    .catch(this.handleError);

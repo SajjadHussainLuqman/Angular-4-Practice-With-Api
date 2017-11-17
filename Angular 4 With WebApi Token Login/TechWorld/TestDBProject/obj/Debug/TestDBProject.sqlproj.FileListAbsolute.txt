@@ -1,0 +1,5 @@
+C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\Angular 4 With WebApi Token Login\TechWorld\TestDBProject\bin\Debug\TestDBProject.dacpac
+C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\Angular 4 With WebApi Token Login\TechWorld\TestDBProject\bin\Debug\TestDBProject.dll
+C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\Angular 4 With WebApi Token Login\TechWorld\TestDBProject\bin\Debug\TestDBProject.pdb
+C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\Angular 4 With WebApi Token Login\TechWorld\TestDBProject\obj\Debug\TestDBProject.dll
+C:\Users\sajjad.hussain\Documents\GitHub\MyPracticeProject\Angular 4 With WebApi Token Login\TechWorld\TestDBProject\obj\Debug\TestDBProject.pdb

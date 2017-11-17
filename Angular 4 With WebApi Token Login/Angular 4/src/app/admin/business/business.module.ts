@@ -10,6 +10,10 @@ import { BrandComponent } from './brand/brand.component';
 import { ProductComponent } from './product/product.component';
 import { SalesOrderComponent } from './sales-order/sales-order.component';
 
+import { MaterialModule } from '../../modules/material/material.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
 @NgModule({
     declarations:[
      CategoryComponent, BrandComponent, ProductComponent, SalesOrderComponent
@@ -18,7 +22,7 @@ import { SalesOrderComponent } from './sales-order/sales-order.component';
 
     ],
     imports: [
-        CommonModule,FormsModule,ReactiveFormsModule, RouterModule.forRoot(businessRoutes)
+        MaterialModule, BrowserAnimationsModule, CommonModule,FormsModule,ReactiveFormsModule, RouterModule.forRoot(businessRoutes)
     ],
     exports:[
 

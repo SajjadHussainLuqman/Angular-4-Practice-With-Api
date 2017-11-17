@@ -55,9 +55,11 @@
     <Compile Include="SalesOrder\Interfaces\ISalesOrderRepository.cs" />
     <Compile Include="SetupTable\Classes\BrandRepository.cs" />
     <Compile Include="SetupTable\Classes\CategoryRepository.cs" />
+    <Compile Include="SetupTable\Classes\ProductRepository.cs" />
     <Compile Include="SetupTable\Interfaces\IBrandRepository.cs" />
     <Compile Include="SetupTable\Interfaces\ICategoryRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SetupTable\Interfaces\IProductRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CommerceApp.DAL.EFramework\CommerceApp.DAL.EFramework.csproj">

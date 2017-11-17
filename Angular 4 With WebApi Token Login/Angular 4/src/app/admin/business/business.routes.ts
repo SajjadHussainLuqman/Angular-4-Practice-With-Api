@@ -1,6 +1,7 @@
 
 import {  Routes } from '@angular/router';
 
+
 import { CategoryComponent } from './category/category.component';
 import { BrandComponent } from './brand/brand.component';
 import { ProductComponent } from './product/product.component';

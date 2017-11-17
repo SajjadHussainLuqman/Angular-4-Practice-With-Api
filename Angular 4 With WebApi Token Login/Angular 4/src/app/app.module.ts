@@ -13,11 +13,9 @@ import { AppComponent } from './app.component';
 
 import { routes } from './app.routes';
 
-import { CategoryService } from './services/category.service';
-import { SalesOrderService } from './services/saleOrder.service';
-import { DataService } from './services/data.service';
-import { SharedService } from './services/shared.service';
-import { LoginService } from './services/login.service';
+import { CategoryService,BrandService,ProductService,SalesOrderService, DataService, SharedService, LoginService } from './services/index';
+
+
 import { AuthGuard } from './security/auth.guard';
 
 import { AppErrorHandler } from './utilites/errorHandling/app-error-handler';
@@ -37,6 +35,8 @@ import { AppErrorHandler } from './utilites/errorHandling/app-error-handler';
     SharedService,
     AuthGuard , 
     LoginService ,
+    BrandService,
+    ProductService,
     {provide: ErrorHandler, useClass: AppErrorHandler},
     {provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]

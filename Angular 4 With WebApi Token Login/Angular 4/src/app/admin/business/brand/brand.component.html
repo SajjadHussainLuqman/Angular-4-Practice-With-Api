@@ -3,8 +3,8 @@
   <!-- Content Header (Page header) -->
   <section class="content-header">
     <h1>
-      Data Tables
-      <small>advanced tables</small>
+      Brands
+      <small>Management</small>
     </h1>
     <ol class="breadcrumb">
       <li>
@@ -12,9 +12,9 @@
           <i class="fa fa-dashboard"></i> Home</a>
       </li>
       <li>
-        <a href="#">Tables</a>
+        <a href="#">Setting</a>
       </li>
-      <li class="active">Data tables</li>
+      <li class="active">Brands</li>
     </ol>
   </section>
 
@@ -24,13 +24,42 @@
       <div class="col-xs-12">
         <div class="box">
           <div class="box-header">
-            <h3 class="box-title">Data Table With Full Features</h3>
+            <h3 class="box-title">All Brands</h3>
           </div>
           <!-- /.box-header -->
           <div class="box-body">
+              <input type="button" value="Add" class="btn btn-default" (click)="AddNew()" />
 
-              
-
+            <table class="table table-bordered table-striped">
+             
+              <thead>
+                <tr>
+                  <th>Id</th>
+                  <th>Brand</th>
+                  <th>Category</th>
+                  <th>Is Active</th>
+                  <th></th>
+                </tr>
+                <tr>
+                    <td><input type="text" [(ngModel)]="_AddBrand.BrandId" readonly disabled /></td>
+                    <td><input type="text" [(ngModel)]="_AddBrand.Name" /></td>
+                    <td>
+                      <select  [(ngModel)]="_Category"   class="form-control select2 select2-hidden-accessible"  style="width: 100%;height: 30px;" tabindex="-1" aria-hidden="true">
+                        <option *ngFor="let cat of Categories" [ngValue]="cat">{{cat.Name}}</option>
+                      </select>
+                    </td>
+                    <td><input type="checkbox" name="IsActive" [(ngModel)]="_AddBrand.IsActive"> </td>
+                    <td>
+                      <button type="button" class="btn btn-primary" (click)="Add()" >Add</button> 
+                    </td>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let item of BrandList; let i=index">
+                      <ng-template [ngTemplateOutlet]="loadTemplate(item)" [ngTemplateOutletContext]="{ $implicit: item, index: i }"></ng-template>
+                  </tr>
+              </tbody>
+            </table>
           </div>
           <!-- /.box-body -->
         </div>
@@ -42,3 +71,34 @@
   </section>
   <!-- /.content -->
 </div>
+
+
+<!--The Html Template for Read-Only Rows-->
+<ng-template #readOnlyTemplate let-item>
+
+    <td>{{item.BrandId}}</td>
+    <td>{{item.Name}}</td>
+    <td>{{item.Category.Name}}</td>
+    <td>{{item.IsActive  ? "Yes" : "No"}}</td>
+    <td>
+      <button type="button" class="btn btn-info" (click)="Edit(item)">Edit</button>
+      <button type="button" class="btn btn-danger">Delete</button>
+    </td>
+
+</ng-template>
+<!--Ends Here-->
+
+<!--The Html Template for Editable Rows-->
+<ng-template #editTemplate>
+
+    <td><input type="text" [(ngModel)]="Brand.BrandId" readonly disabled /></td>
+    <td><input type="text" [(ngModel)]="Brand.Name" /></td>
+    <td><input type="text" [(ngModel)]="Brand.Category.Name" /></td>
+    <td><input type="checkbox" name="IsActive" [(ngModel)]="Brand.IsActive"> </td>
+    <td>
+      <button type="button" class="btn btn-success">Save</button> 
+      <button type="button" class="btn btn-warning" (click)="Cancel()">Cancel</button> 
+    </td>
+ 
+</ng-template>
+<!--Ends Here-->

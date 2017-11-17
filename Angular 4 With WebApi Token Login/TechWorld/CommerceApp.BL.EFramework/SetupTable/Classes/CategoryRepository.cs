@@ -5,9 +5,9 @@ namespace CommerceApp.BL.EFramework
 {
     public class CategoryRepository : GenericRepository<CommerceAppDBEntities, Category>, ICategoryRepository
     {
-        public Category GetSingle(int CategoryId)
+        public Category GetSingle(int Id)
         {
-            var query = GetAll().FirstOrDefault(x => x.CategoryId == CategoryId);
+            var query = GetAll().FirstOrDefault(x => x.CategoryId == Id);
             return query;
         }
     }

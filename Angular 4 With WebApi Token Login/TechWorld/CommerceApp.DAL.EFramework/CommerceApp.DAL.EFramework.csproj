@@ -89,7 +89,7 @@
     </Compile>
     <Compile Include="GenericRepository.cs" />
     <Compile Include="IGenericRepository.cs" />
-    <Compile Include="Model.cs">
+    <Compile Include="Product.cs">
       <DependentUpon>CommerceAppModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -30,11 +30,11 @@ namespace CommerceApp.DAL.EFramework
         public virtual DbSet<AspNetUserClaim> AspNetUserClaims { get; set; }
         public virtual DbSet<AspNetUserLogin> AspNetUserLogins { get; set; }
         public virtual DbSet<AspNetUser> AspNetUsers { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
-        public virtual DbSet<SaleItem> SaleItems { get; set; }
-        public virtual DbSet<SaleOrder> SaleOrders { get; set; }
         public virtual DbSet<Brand> Brands { get; set; }
         public virtual DbSet<Category> Categories { get; set; }
-        public virtual DbSet<Model> Models { get; set; }
+        public virtual DbSet<Product> Products { get; set; }
+        public virtual DbSet<SaleItem> SaleItems { get; set; }
+        public virtual DbSet<SaleOrder> SaleOrders { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
     }
 }

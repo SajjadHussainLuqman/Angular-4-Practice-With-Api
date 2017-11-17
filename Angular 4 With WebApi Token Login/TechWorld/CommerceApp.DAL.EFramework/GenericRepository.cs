@@ -21,7 +21,6 @@ namespace CommerceApp.DAL.EFramework
 
         public virtual IQueryable<T> GetAll()
         {
-
             IQueryable<T> query = _entities.Set<T>();
             return query;
         }

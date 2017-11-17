@@ -1,4 +1,4 @@
-import { SaleItem } from './saleItem';
+import { SaleItem } from './index';
 
 export class SaleOrder {
     SaleId: Number;

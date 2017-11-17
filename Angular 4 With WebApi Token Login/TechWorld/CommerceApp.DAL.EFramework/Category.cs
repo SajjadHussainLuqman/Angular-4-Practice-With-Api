@@ -18,7 +18,7 @@ namespace CommerceApp.DAL.EFramework
         public Category()
         {
             this.Brands = new HashSet<Brand>();
-            this.Models = new HashSet<Model>();
+            this.Products = new HashSet<Product>();
         }
     
         public int CategoryId { get; set; }
@@ -29,6 +29,6 @@ namespace CommerceApp.DAL.EFramework
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Brand> Brands { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Model> Models { get; set; }
+        public virtual ICollection<Product> Products { get; set; }
     }
 }
