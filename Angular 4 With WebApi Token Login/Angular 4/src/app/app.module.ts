@@ -20,12 +20,15 @@ import { AuthGuard } from './security/auth.guard';
 
 import { AppErrorHandler } from './utilites/errorHandling/app-error-handler';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule,HttpModule,DashboardModule, WebModule,FormsModule,ReactiveFormsModule,
+    BrowserModule,HttpModule,DashboardModule, WebModule,FormsModule,
+    ReactiveFormsModule, BrowserAnimationsModule,
     RouterModule.forRoot(routes, {useHash: true})
   ],
   providers: [

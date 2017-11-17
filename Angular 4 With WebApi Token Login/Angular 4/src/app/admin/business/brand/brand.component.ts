@@ -41,7 +41,10 @@ export class BrandComponent implements OnInit {
   
     Get() {
       this._BrandService.Get()
-        .subscribe((returnData) => this.BrandList = returnData);
+        .subscribe((returnData) => {
+          this.BrandList = returnData; 
+          console.log(this.BrandList);
+        });
     }
 
     GetCategories() {
@@ -68,10 +71,8 @@ export class BrandComponent implements OnInit {
     
     Add() {
 
-    debugger;
-      this._AddBrand.Category=new Category();
-      this._AddBrand.Category.CategoryId=this._Category.CategoryId;
-      this._AddBrand.Category.Name=this._Category.Name;
+      this._AddBrand.CategoryId=this._Category.CategoryId;
+      this._AddBrand.CategoryName=this._Category.Name;
       this._AddBrand.CategoryId=this._Category.CategoryId;
 
       this.BrandList.splice(0, 0, this._AddBrand);
@@ -81,7 +82,6 @@ export class BrandComponent implements OnInit {
           this._AddBrand['BrandId'] = returnData.BrandId;
 
           this._AddBrand = new Brand();
-          this._AddBrand.Category=new Category();
         },
         (error: AppError ) => {
           this.BrandList.splice(0, 1);

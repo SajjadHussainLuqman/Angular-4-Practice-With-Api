@@ -11,8 +11,6 @@ import { ProductComponent } from './product/product.component';
 import { SalesOrderComponent } from './sales-order/sales-order.component';
 
 import { MaterialModule } from '../../modules/material/material.module';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 
 @NgModule({
     declarations:[
@@ -22,7 +20,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
     ],
     imports: [
-        MaterialModule, BrowserAnimationsModule, CommonModule,FormsModule,ReactiveFormsModule, RouterModule.forRoot(businessRoutes)
+        MaterialModule, CommonModule,FormsModule,ReactiveFormsModule, RouterModule.forRoot(businessRoutes)
     ],
     exports:[
 
