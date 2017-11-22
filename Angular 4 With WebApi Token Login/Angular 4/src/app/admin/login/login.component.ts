@@ -17,6 +17,7 @@ export class LoginComponent implements OnInit {
   Message: string;
   loading: Boolean;
   CanLogin: Boolean;
+  
 
   constructor(private _router: Router
     , private _activatedRoute: ActivatedRoute
@@ -31,8 +32,8 @@ export class LoginComponent implements OnInit {
 
 
   signIn(anyValue: any) {
-    this.Message = "Wait...";
-
+    this.Message = "";
+    this.loading = true;
     this._loginService.Login(this.getLoginBody(anyValue.email, anyValue.password).toString()).subscribe(
       response => {
 
@@ -43,7 +44,7 @@ export class LoginComponent implements OnInit {
 
         this.Message = "";
         this._router.navigate(['Admin']);
-
+        this.loading = false;
       },
       error => {
 

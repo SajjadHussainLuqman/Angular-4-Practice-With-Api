@@ -17,6 +17,7 @@ export class ProductComponent implements OnInit, AfterViewInit {
 
   _brand: Brand;
   _brandList: Brand[];
+  loading: Boolean;
 
   displayedColumns = ['BrandId', 'Name', 'CategoryName', 'IsActive'];
   
@@ -36,12 +37,14 @@ export class ProductComponent implements OnInit, AfterViewInit {
   }
 
   Get() {
+    this.loading = true;
     this._BrandService.Get()
       .subscribe((returnData) => {
         this._brandList = returnData; 
         this.dataSource = new MatTableDataSource<Brand>(this._brandList);
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
+        this.loading = false;
       });
   }
 

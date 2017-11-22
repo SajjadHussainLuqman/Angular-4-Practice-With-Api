@@ -11,6 +11,7 @@ import { ProductComponent } from './product/product.component';
 import { SalesOrderComponent } from './sales-order/sales-order.component';
 
 import { MaterialModule } from '../../modules/material/material.module';
+import { LoadingModule } from 'ngx-loading';
 
 @NgModule({
     declarations:[
@@ -20,7 +21,7 @@ import { MaterialModule } from '../../modules/material/material.module';
 
     ],
     imports: [
-        MaterialModule, CommonModule,FormsModule,ReactiveFormsModule, RouterModule.forRoot(businessRoutes)
+        MaterialModule, CommonModule,FormsModule,ReactiveFormsModule, LoadingModule, RouterModule.forRoot(businessRoutes)
     ],
     exports:[
 

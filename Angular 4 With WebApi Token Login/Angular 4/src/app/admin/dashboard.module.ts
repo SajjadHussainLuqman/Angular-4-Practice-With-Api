@@ -18,7 +18,7 @@ import { SalesReportComponent } from './reporting/sales-report/sales-report.comp
 import { PurchaseReportComponent } from './reporting/purchase-report/purchase-report.component';
 
 import { BusinessModule } from './business/index';
-
+import { LoadingModule } from 'ngx-loading';
 
 @NgModule({
     declarations:[
@@ -30,7 +30,7 @@ import { BusinessModule } from './business/index';
         
     ],
     imports: [
-        CommonModule,FormsModule,ReactiveFormsModule, BusinessModule, RouterModule.forRoot(dashboardRoutes)
+        CommonModule,FormsModule,ReactiveFormsModule, BusinessModule, LoadingModule, RouterModule.forRoot(dashboardRoutes)
     ],
     exports:[
 
