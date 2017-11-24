@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material';
-
+import {FormControl} from '@angular/forms';
 
 export class User {
   constructor(public name: string) { }
@@ -13,6 +13,19 @@ export class User {
 })
 export class TestComponentComponent implements OnInit {
 
+  toppings = new FormControl();
+
+  toppingList = ['Extra cheese', 'Mushroom', 'Onion', 'Pepperoni', 'Sausage', 'Tomato'];
+
+  favoriteSeason: string;
+  
+    seasons = [
+      'Winter',
+      'Spring',
+      'Summer',
+      'Autumn',
+    ];
+    
   constructor(public snackBar: MatSnackBar) { }
 
   ngOnInit() {
