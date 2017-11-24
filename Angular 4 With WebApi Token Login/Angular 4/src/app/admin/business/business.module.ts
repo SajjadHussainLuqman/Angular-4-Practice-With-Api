@@ -12,10 +12,11 @@ import { SalesOrderComponent } from './sales-order/sales-order.component';
 
 import { MaterialModule } from '../../modules/material/material.module';
 import { LoadingModule } from 'ngx-loading';
+import { TestComponentComponent } from './test-component/test-component.component';
 
 @NgModule({
     declarations:[
-     CategoryComponent, BrandComponent, ProductComponent, SalesOrderComponent
+     CategoryComponent, BrandComponent, ProductComponent, SalesOrderComponent, TestComponentComponent
     ],
     providers: [
 
