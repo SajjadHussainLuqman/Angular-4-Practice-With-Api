@@ -12,12 +12,15 @@ namespace CommerceApp.DAL.EFramework
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class CommerceAppDBEntities : DbContext
     {
         public CommerceAppDBEntities()
             : base("name=CommerceAppDBEntities")
         {
+            this.Configuration.LazyLoadingEnabled = false;
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -36,5 +39,15 @@ namespace CommerceApp.DAL.EFramework
         public virtual DbSet<SaleItem> SaleItems { get; set; }
         public virtual DbSet<SaleOrder> SaleOrders { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+    
+        public virtual ObjectResult<Brand_Get> usp_Brand_Get()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Brand_Get>("usp_Brand_Get");
+        }
+    
+        public virtual ObjectResult<Product_Get> usp_Product_Get()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Product_Get>("usp_Product_Get");
+        }
     }
 }

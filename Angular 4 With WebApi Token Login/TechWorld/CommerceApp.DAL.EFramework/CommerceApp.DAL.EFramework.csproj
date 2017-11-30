@@ -66,6 +66,9 @@
     <Compile Include="Brand.cs">
       <DependentUpon>CommerceAppModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Brand_Get.cs">
+      <DependentUpon>CommerceAppModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Category.cs">
       <DependentUpon>CommerceAppModel.tt</DependentUpon>
     </Compile>
@@ -90,6 +93,9 @@
     <Compile Include="GenericRepository.cs" />
     <Compile Include="IGenericRepository.cs" />
     <Compile Include="Product.cs">
+      <DependentUpon>CommerceAppModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Product_Get.cs">
       <DependentUpon>CommerceAppModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />

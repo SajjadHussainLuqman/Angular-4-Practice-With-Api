@@ -226,6 +226,8 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="usp_Brand_Get" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="usp_Product_Get" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="CommerceAppDBModelStoreContainer">
           <EntitySet Name="__MigrationHistory" EntityType="Self.__MigrationHistory" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRoles" Schema="dbo" store:Type="Tables" />
@@ -276,7 +278,7 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="CommerceAppDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityContainer Name="CommerceAppDBEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="CommerceAppDBEntities" annotation:LazyLoadingEnabled="false">
           <EntitySet Name="C__MigrationHistory" EntityType="CommerceAppDBModel.C__MigrationHistory" />
           <EntitySet Name="AspNetRoles" EntityType="CommerceAppDBModel.AspNetRole" />
           <EntitySet Name="AspNetUserClaims" EntityType="CommerceAppDBModel.AspNetUserClaim" />
@@ -316,6 +318,8 @@
             <End Role="AspNetRole" EntitySet="AspNetRoles" />
             <End Role="AspNetUser" EntitySet="AspNetUsers" />
           </AssociationSet>
+          <FunctionImport Name="usp_Brand_Get" ReturnType="Collection(CommerceAppDBModel.Brand_Get)" />
+          <FunctionImport Name="usp_Product_Get" ReturnType="Collection(CommerceAppDBModel.Product_Get)" />
         </EntityContainer>
         <EntityType Name="C__MigrationHistory">
           <Key>
@@ -520,6 +524,25 @@
           <End Type="CommerceAppDBModel.AspNetRole" Role="AspNetRole" Multiplicity="*" />
           <End Type="CommerceAppDBModel.AspNetUser" Role="AspNetUser" Multiplicity="*" />
         </Association>
+        <ComplexType Name="Brand_Get">
+          <Property Type="Int32" Name="BrandId" Nullable="false" />
+          <Property Type="Int32" Name="CategoryId" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+          <Property Type="Boolean" Name="IsActive" Nullable="true" />
+          <Property Type="Int32" Name="SortOrder" Nullable="false" />
+          <Property Type="String" Name="Name1" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="Product_Get">
+          <Property Type="Int32" Name="ProductId" Nullable="false" />
+          <Property Type="Int32" Name="CategoryId" Nullable="false" />
+          <Property Type="Int32" Name="BrandId" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="PictureName" Nullable="true" MaxLength="250" />
+          <Property Type="Boolean" Name="IsActive" Nullable="true" />
+          <Property Type="Int32" Name="SortOrder" Nullable="false" />
+          <Property Type="String" Name="BrandName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="CategoryName" Nullable="true" MaxLength="50" />
+        </ComplexType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -651,6 +674,33 @@
               <ScalarProperty Name="Id" ColumnName="RoleId" />
             </EndProperty>
           </AssociationSetMapping>
+          <FunctionImportMapping FunctionImportName="usp_Brand_Get" FunctionName="CommerceAppDBModel.Store.usp_Brand_Get">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="CommerceAppDBModel.Brand_Get">
+                <ScalarProperty Name="BrandId" ColumnName="BrandId" />
+                <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+                <ScalarProperty Name="Name1" ColumnName="Name1" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_Product_Get" FunctionName="CommerceAppDBModel.Store.usp_Product_Get">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="CommerceAppDBModel.Product_Get">
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+                <ScalarProperty Name="BrandId" ColumnName="BrandId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="PictureName" ColumnName="PictureName" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+                <ScalarProperty Name="BrandName" ColumnName="BrandName" />
+                <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

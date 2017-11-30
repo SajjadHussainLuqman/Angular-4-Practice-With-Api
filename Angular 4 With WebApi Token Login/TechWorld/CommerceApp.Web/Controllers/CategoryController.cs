@@ -12,7 +12,7 @@ using CommerceApp.BL.EFramework;
 namespace CommerceApp.Web.Controllers
 {
  
-    //[Authorize]
+    [Authorize]
     public class CategoryController : ApiController
     {
         CategoryRepository repCategory;
